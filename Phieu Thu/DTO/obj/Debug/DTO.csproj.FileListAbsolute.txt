@@ -1,0 +1,6 @@
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\bin\Debug\DTO_Login.dll.config
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\bin\Debug\DTO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\bin\Debug\DTO_Login.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\obj\Debug\DTO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\DTO\obj\Debug\DTO_Login.pdb

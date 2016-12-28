@@ -1,0 +1,9 @@
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\DAO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\DTO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\DAO_Login.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\bin\Debug\DTO_Login.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Login + QLUser\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

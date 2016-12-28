@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6EFA715A-0ED5-43A8-AAF3-1F33C081BA54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation_Tier</RootNamespace>
+    <AssemblyName>Presentation_Tier</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Reporting.Extensions, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BCDoanhThu\UserControl_AddBCDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_AddBCDoanhThu.Designer.cs">
+      <DependentUpon>UserControl_AddBCDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_EditBCDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_EditBCDoanhThu.Designer.cs">
+      <DependentUpon>UserControl_EditBCDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_ListBCDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_ListBCDoanhThu.Designer.cs">
+      <DependentUpon>UserControl_ListBCDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_ListButton_BCDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCDoanhThu\UserControl_ListButton_BCDoanhThu.Designer.cs">
+      <DependentUpon>UserControl_ListButton_BCDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_AddBCTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_AddBCTonKho.Designer.cs">
+      <DependentUpon>UserControl_AddBCTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_EditBCTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_EditBCTonKho.Designer.cs">
+      <DependentUpon>UserControl_EditBCTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_ListBCTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_ListBCTonKho.Designer.cs">
+      <DependentUpon>UserControl_ListBCTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_ListButton_BCTonKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCTonKho\UserControl_ListButton_BCTonKho.Designer.cs">
+      <DependentUpon>UserControl_ListButton_BCTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\MyGridLocalizer.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_AddBCCongNoKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_AddBCCongNoKH.Designer.cs">
+      <DependentUpon>UserControl_AddBCCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_EditBCCongNoKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_EditBCCongNoKH.Designer.cs">
+      <DependentUpon>UserControl_EditBCCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_ListButton_BCCongNoKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_ListButton_BCCongNoKH.Designer.cs">
+      <DependentUpon>UserControl_ListButton_BCCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_ListBCCongNoKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BCCongNoKH\UserControl_ListBCCongNoKH.Designer.cs">
+      <DependentUpon>UserControl_ListBCCongNoKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_ListButton_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_ListButton_User.Designer.cs">
+      <DependentUpon>UserControl_ListButton_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\UserControl_Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\UserControl_Login.Designer.cs">
+      <DependentUpon>UserControl_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\UserControl_MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\UserControl_MainMenu.Designer.cs">
+      <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_AddPhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_AddPhieuChi.Designer.cs">
+      <DependentUpon>UserControl_AddPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_EditPhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_EditPhieuChi.designer.cs">
+      <DependentUpon>UserControl_EditPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_ListButton_PhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_ListButton_PhieuChi.Designer.cs">
+      <DependentUpon>UserControl_ListButton_PhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_ListPhieuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuChi\UserControl_ListPhieuChi.designer.cs">
+      <DependentUpon>UserControl_ListPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_AddPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_AddPhieuThu.Designer.cs">
+      <DependentUpon>UserControl_AddPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_EditPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_EditPhieuThu.designer.cs">
+      <DependentUpon>UserControl_EditPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_ListButton_PhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_ListButton_PhieuThu.Designer.cs">
+      <DependentUpon>UserControl_ListButton_PhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_ListPhieuThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuThu\UserControl_ListPhieuThu.designer.cs">
+      <DependentUpon>UserControl_ListPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NhanVien\UserControl_AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_AddUser.Designer.cs">
+      <DependentUpon>UserControl_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_EditUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_EditUser.Designer.cs">
+      <DependentUpon>UserControl_EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_ListUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NhanVien\UserControl_ListUser.Designer.cs">
+      <DependentUpon>UserControl_ListUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BCDoanhThu\UserControl_AddBCDoanhThu.resx">
+      <DependentUpon>UserControl_AddBCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCDoanhThu\UserControl_EditBCDoanhThu.resx">
+      <DependentUpon>UserControl_EditBCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCDoanhThu\UserControl_ListBCDoanhThu.resx">
+      <DependentUpon>UserControl_ListBCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCDoanhThu\UserControl_ListButton_BCDoanhThu.resx">
+      <DependentUpon>UserControl_ListButton_BCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCTonKho\UserControl_AddBCTonKho.resx">
+      <DependentUpon>UserControl_AddBCTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCTonKho\UserControl_EditBCTonKho.resx">
+      <DependentUpon>UserControl_EditBCTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCTonKho\UserControl_ListBCTonKho.resx">
+      <DependentUpon>UserControl_ListBCTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCTonKho\UserControl_ListButton_BCTonKho.resx">
+      <DependentUpon>UserControl_ListButton_BCTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCCongNoKH\UserControl_AddBCCongNoKH.resx">
+      <DependentUpon>UserControl_AddBCCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCCongNoKH\UserControl_EditBCCongNoKH.resx">
+      <DependentUpon>UserControl_EditBCCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCCongNoKH\UserControl_ListButton_BCCongNoKH.resx">
+      <DependentUpon>UserControl_ListButton_BCCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCCongNoKH\UserControl_ListBCCongNoKH.resx">
+      <DependentUpon>UserControl_ListBCCongNoKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\UserControl_ListButton_User.resx">
+      <DependentUpon>UserControl_ListButton_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\UserControl_Login.resx">
+      <DependentUpon>UserControl_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\UserControl_MainMenu.resx">
+      <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuChi\UserControl_AddPhieuChi.resx">
+      <DependentUpon>UserControl_AddPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuChi\UserControl_EditPhieuChi.resx">
+      <DependentUpon>UserControl_EditPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuChi\UserControl_ListButton_PhieuChi.resx">
+      <DependentUpon>UserControl_ListButton_PhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuChi\UserControl_ListPhieuChi.resx">
+      <DependentUpon>UserControl_ListPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThu\UserControl_AddPhieuThu.resx">
+      <DependentUpon>UserControl_AddPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThu\UserControl_EditPhieuThu.resx">
+      <DependentUpon>UserControl_EditPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThu\UserControl_ListButton_PhieuThu.resx">
+      <DependentUpon>UserControl_ListButton_PhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuThu\UserControl_ListPhieuThu.resx">
+      <DependentUpon>UserControl_ListPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="NhanVien\UserControl_AddUser.resx">
+      <DependentUpon>UserControl_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\UserControl_EditUser.resx">
+      <DependentUpon>UserControl_EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\UserControl_ListUser.resx">
+      <DependentUpon>UserControl_ListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicTier\BUS.csproj">
+      <Project>{e698e18c-f0d9-4488-b538-59457f55ac51}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{3210196b-f070-40c3-8e11-4e3270c55994}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-body.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
