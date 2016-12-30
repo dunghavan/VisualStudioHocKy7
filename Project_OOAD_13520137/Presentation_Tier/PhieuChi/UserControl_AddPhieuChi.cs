@@ -31,19 +31,26 @@ namespace Presentation_Tier
         public UserControl_AddPhieuChi()
         {
             InitializeComponent();
+            try
+            {
+                //Khởi tạo item cho comboBox mã NCC:
+                tableNhaCungCap = objNCCBus.getAllNhaCungCap();
+                foreach (DataRow dr in tableNhaCungCap.Rows)
+                    if (!comboBox_maNCC.Properties.Items.Contains(dr["MaNCC"].ToString()))
+                        comboBox_maNCC.Properties.Items.Add(dr["MaNCC"].ToString());
 
-            //Khởi tạo item cho comboBox mã NCC:
-            tableNhaCungCap = objNCCBus.getAllNhaCungCap();
-            foreach (DataRow dr in tableNhaCungCap.Rows)
-                if (!comboBox_maNCC.Properties.Items.Contains(dr["MaNCC"].ToString()))
-                    comboBox_maNCC.Properties.Items.Add(dr["MaNCC"].ToString());
+                //Khởi tạo gán giá trị cho mã NV:
+                textEdit_maNV.Text = UserControl_Login.login_User.maNhanVien;
+                //Khởi tạo mã NCC:
 
-            //Khởi tạo gán giá trị cho mã NV:
-            textEdit_maNV.Text = UserControl_Login.login_User.maNhanVien;
-            //Khởi tạo mã NCC:
+                //
+                textEdit_maPhieuChi.Focus();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi load dữ liệu:" + ex.Message);
+            }
             
-            //
-            textEdit_maPhieuChi.Focus();
         }
 
         //Tạo các biến lưu giá trị trên màn hình:
@@ -66,26 +73,33 @@ namespace Presentation_Tier
         {
             if(checkAddNewInformation())
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                PhieuChi tempPhieuChi = new PhieuChi(tempMaPC, Convert.ToDateTime(tempNgayLap), tempMaNV, tempMaNCC,
-                                                    tempSoTienNo, tempSoTienChi);
-                bool inserted = false;
-                inserted = UserControl_ListPhieuChi.objPhieuChiBUS.addPhieuChi(tempPhieuChi);
-                if (inserted)
+                try
                 {
-                    //XtraMessageBox.Show("Cập nhật thành công!");
-                    UserControl_ListPhieuChi.Instance.loadDanhSachPhieuChi();
-                    UserControl_ListPhieuChi.Instance.BringToFront();
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    PhieuChi tempPhieuChi = new PhieuChi(tempMaPC, Convert.ToDateTime(tempNgayLap), tempMaNV, tempMaNCC,
+                                                        tempSoTienNo, tempSoTienChi);
+                    bool inserted = false;
+                    inserted = UserControl_ListPhieuChi.objPhieuChiBUS.addPhieuChi(tempPhieuChi);
+                    if (inserted)
+                    {
+                        //XtraMessageBox.Show("Cập nhật thành công!");
+                        UserControl_ListPhieuChi.Instance.loadDanhSachPhieuChi();
+                        UserControl_ListPhieuChi.Instance.BringToFront();
 
-                    UserControl_ListPhieuChi.Instance.label_notification.Text = "Thêm thành công!";
+                        UserControl_ListPhieuChi.Instance.label_notification.Text = "Thêm thành công!";
 
-                    //Enable các btn:
-                    UserControl_ListButton_PhieuChi.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_PhieuChi.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_PhieuChi.Instance.btn_Xoa.Enabled = false;
+                        //Enable các btn:
+                        UserControl_ListButton_PhieuChi.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_PhieuChi.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_PhieuChi.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Thêm không thành công!");
                 }
-                else
-                    XtraMessageBox.Show("Thêm không thành công!");
+                catch(Exception ex)
+                {
+                    XtraMessageBox.Show("Lỗi lưu thông tin: " + ex.Message);
+                }
             }
             else
             {

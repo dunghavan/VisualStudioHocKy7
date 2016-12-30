@@ -31,18 +31,25 @@ namespace Presentation_Tier
         public UserControl_AddBCCongNoKH()
         {
             InitializeComponent();
+            try
+            {
+                tableKhachHang = objKHBus.Load_DSKhachHang();
+                //Khởi tạo item cho comboBox mã KH:
+                foreach (DataRow dr in tableKhachHang.Rows)
+                    if (!comboBox_makH.Properties.Items.Contains(dr["MaKH"].ToString()))
+                        comboBox_makH.Properties.Items.Add(dr["MaKH"].ToString());
 
-            tableKhachHang = objKHBus.Load_DSKhachHang();
-            //Khởi tạo item cho comboBox mã KH:
-            foreach (DataRow dr in tableKhachHang.Rows)
-                if (!comboBox_makH.Properties.Items.Contains(dr["MaKH"].ToString()))
-                    comboBox_makH.Properties.Items.Add(dr["MaKH"].ToString());
+                //Khởi tạo gán giá trị cho mã NV:
+                textEdit_maNV.Text = UserControl_Login.login_User.maNhanVien;
 
-            //Khởi tạo gán giá trị cho mã NV:
-            textEdit_maNV.Text = UserControl_Login.login_User.maNhanVien;
-
-            //
-            dateEdit_ngayLap.Focus();
+                //
+                dateEdit_ngayLap.Focus();
+            }
+            catch(Exception e)
+            {
+                XtraMessageBox.Show("Lỗi khởi tạo các thành phần: " + e.Message);
+            }
+            
         }
         
         private void btn_Huy_Click(object sender, EventArgs e)
@@ -107,55 +114,71 @@ namespace Presentation_Tier
 
         private void tinhNoKyCuoi_PhatSinh()
         {
-            ngayLapSelected = Convert.ToDateTime(dateEdit_ngayLap.Text);
-            if (ngayLapSelected.Month == 1)
+            try
             {
-                noKyDau = objBCBUS.getNoKyCuoi(maKHSelected, 12, ngayLapSelected.Year - 1);
+                ngayLapSelected = Convert.ToDateTime(dateEdit_ngayLap.Text);
+                if (ngayLapSelected.Month == 1)
+                {
+                    noKyDau = objBCBUS.getNoKyCuoi(maKHSelected, 12, ngayLapSelected.Year - 1);
+                }
+                else
+                {
+                    noKyDau = objBCBUS.getNoKyCuoi(maKHSelected, ngayLapSelected.Month - 1, ngayLapSelected.Year);
+                }
+                textEdit_noKyDau.Text = noKyDau.ToString();
+                int phatSinhThangNay = objPTBUS.getTongTienNoTrongThang(maKHSelected, ngayLapSelected.Month, ngayLapSelected.Year);
+                textEdit_phatSinh.Text = phatSinhThangNay.ToString();
+                if (textEdit_phatSinh.Text.Length > 0)
+                {
+                    textEdit_noKyCuoi.Text = (noKyDau + Convert.ToInt32(textEdit_phatSinh.Text)).ToString();
+                }
             }
-            else
+            catch (Exception e)
             {
-                noKyDau = objBCBUS.getNoKyCuoi(maKHSelected, ngayLapSelected.Month - 1, ngayLapSelected.Year);
+                XtraMessageBox.Show("Lỗi tính nợ cuối kỳ: " + e.Message);
             }
-            textEdit_noKyDau.Text = noKyDau.ToString();
-            int phatSinhThangNay = objPTBUS.getTongTienNoTrongThang(maKHSelected, ngayLapSelected.Month, ngayLapSelected.Year);
-            textEdit_phatSinh.Text = phatSinhThangNay.ToString();
-            if (textEdit_phatSinh.Text.Length > 0)
-            {
-                textEdit_noKyCuoi.Text = (noKyDau + Convert.ToInt32(textEdit_phatSinh.Text)).ToString();
-            }
+            
         }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if(checkAddNewInformation())
+            try
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                BCCongNoKH tempBaoCao = new BCCongNoKH(Convert.ToDateTime(tempNgayLap), tempMaKH, tempMaNV, Convert.ToInt32(tempNoKyDau), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempNoKyCuoi), tempGhiChu);
-                bool inserted = false;
-                inserted = UserControl_ListBCCongNoKH.objBCBus.addBaoCao(tempBaoCao);
-                if (inserted)
+                if (checkAddNewInformation())
                 {
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    BCCongNoKH tempBaoCao = new BCCongNoKH(Convert.ToDateTime(tempNgayLap), tempMaKH, tempMaNV, Convert.ToInt32(tempNoKyDau), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempNoKyCuoi), tempGhiChu);
+                    bool inserted = false;
+                    inserted = UserControl_ListBCCongNoKH.objBCBus.addBaoCao(tempBaoCao);
+                    if (inserted)
+                    {
 
-                    Form parentForm = this.FindForm();
-                    UserControl_ListBCCongNoKH.Instance.loadDanhSachBaoCao();
-                    if(!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListBCCongNoKH.Instance))
-                        ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListBCCongNoKH.Instance);
-                    UserControl_ListBCCongNoKH.Instance.BringToFront();
+                        Form parentForm = this.FindForm();
+                        UserControl_ListBCCongNoKH.Instance.loadDanhSachBaoCao();
+                        if (!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListBCCongNoKH.Instance))
+                            ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListBCCongNoKH.Instance);
+                        UserControl_ListBCCongNoKH.Instance.BringToFront();
 
-                    UserControl_ListBCCongNoKH.Instance.label_notification.Text = "Thêm thành công!";
+                        UserControl_ListBCCongNoKH.Instance.label_notification.Text = "Thêm thành công!";
 
-                    //Enable/Disable các btn:
-                    UserControl_ListButton_BCCongNoKH.Instance.btn_themMoi.Enabled = true;
-                    //UserControl_ListButton_BCCongNoKH.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_BCCongNoKH.Instance.btn_Xoa.Enabled = false;
-                    //showUpdateNotification();
+                        //Enable/Disable các btn:
+                        UserControl_ListButton_BCCongNoKH.Instance.btn_themMoi.Enabled = true;
+                        //UserControl_ListButton_BCCongNoKH.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_BCCongNoKH.Instance.btn_Xoa.Enabled = false;
+                        //showUpdateNotification();
+                    }
+                    else
+                        XtraMessageBox.Show("Thêm không thành công!");
                 }
                 else
-                    XtraMessageBox.Show("Thêm không thành công!");
+                {
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                
+                XtraMessageBox.Show("Lỗi lưu báo cáo: " + ex.Message);
             }
+            
         }
 
         private bool checkAddNewInformation() //Kiểm tra các thông tin mới trên form:
@@ -200,16 +223,6 @@ namespace Presentation_Tier
                 XtraMessageBox.Show("Lỗi khi check thông tin: " + ex.Message);
                 return false;
             }
-        }
-        public void showUpdateNotification()
-        {
-            UserControl_ListBCCongNoKH.Instance.label_notification.Text = "Thêm thành công!";
-            int start = Environment.TickCount;
-            while (Environment.TickCount - start < 3000)
-            {
-
-            }
-            UserControl_ListBCCongNoKH.Instance.label_notification.Text = null;
         }
     }
 }

@@ -41,8 +41,8 @@
             this.groupControl_EditUser = new DevExpress.XtraEditors.GroupControl();
             this.dateEdit_ngayLap = new DevExpress.XtraEditors.DateEdit();
             this.textEdit_maNV = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit_soTienChi = new DevExpress.XtraEditors.TextEdit();
             this.label_ngayLap = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit_soTienChi = new DevExpress.XtraEditors.TextEdit();
             this.label_soTienChi = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -134,6 +134,7 @@
             this.textEdit_soTienNo.Name = "textEdit_soTienNo";
             this.textEdit_soTienNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_soTienNo.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_soTienNo.Properties.MaxLength = 20;
             this.textEdit_soTienNo.Properties.NullText = "0";
             this.textEdit_soTienNo.Size = new System.Drawing.Size(161, 26);
             this.textEdit_soTienNo.TabIndex = 5;
@@ -195,18 +196,9 @@
             this.textEdit_maNV.Name = "textEdit_maNV";
             this.textEdit_maNV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_maNV.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_maNV.Properties.MaxLength = 10;
             this.textEdit_maNV.Size = new System.Drawing.Size(161, 26);
             this.textEdit_maNV.TabIndex = 3;
-            // 
-            // textEdit_soTienChi
-            // 
-            this.textEdit_soTienChi.EditValue = "";
-            this.textEdit_soTienChi.Location = new System.Drawing.Point(176, 155);
-            this.textEdit_soTienChi.Name = "textEdit_soTienChi";
-            this.textEdit_soTienChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit_soTienChi.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_soTienChi.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_soTienChi.TabIndex = 6;
             // 
             // label_ngayLap
             // 
@@ -217,6 +209,17 @@
             this.label_ngayLap.Size = new System.Drawing.Size(72, 19);
             this.label_ngayLap.TabIndex = 16;
             this.label_ngayLap.Text = "Ngày Lập:";
+            // 
+            // textEdit_soTienChi
+            // 
+            this.textEdit_soTienChi.EditValue = "";
+            this.textEdit_soTienChi.Location = new System.Drawing.Point(176, 155);
+            this.textEdit_soTienChi.Name = "textEdit_soTienChi";
+            this.textEdit_soTienChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_soTienChi.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_soTienChi.Properties.MaxLength = 20;
+            this.textEdit_soTienChi.Size = new System.Drawing.Size(161, 26);
+            this.textEdit_soTienChi.TabIndex = 6;
             // 
             // label_soTienChi
             // 

@@ -86,38 +86,37 @@ namespace Presentation_Tier
                     switch(login_User.maLoaiNV)
                     {
                         case "QKL":
-                            ((MainForm)parentForm).tabQLK.Select();
-                            //((MainForm)parentForm).tabPanel.Ac
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabQLK;
                             ((MainForm)parentForm).btn_BCTonKho.Enabled = true;
                             break;
                         case "BH":
-                            ((MainForm)parentForm).tabBH.Select();
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabBH;
                             ((MainForm)parentForm).btn_donDatHang.Enabled = true;
                             ((MainForm)parentForm).btn_HDBanHang.Enabled = true;
                             ((MainForm)parentForm).btn_phieuGiaoHang.Enabled = true;
                             ((MainForm)parentForm).btn_QLKhachHang.Enabled = true;
                             break;
                         case "NH":
-                            ((MainForm)parentForm).tabNH.Select();
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabNH;
                             ((MainForm)parentForm).btn_donNhapHang.Enabled = true;
                             ((MainForm)parentForm).btn_HDNhapHang.Enabled = true;
                             ((MainForm)parentForm).btn_QLSanPham.Enabled = true;
                             ((MainForm)parentForm).btn_QLNhaCC.Enabled = true;
                             break;
                         case "KT":
-                            ((MainForm)parentForm).tabKeToan.Select();
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabKeToan;
                             ((MainForm)parentForm).btn_BCCongNoKH.Enabled = true;
                             ((MainForm)parentForm).btn_BCDoanhThu.Enabled = true;
                             ((MainForm)parentForm).btn_phieuThu.Enabled = true;
                             ((MainForm)parentForm).btn_phieuChi.Enabled = true;
                             break;
                         case "AD":
-                            ((MainForm)parentForm).tabAdmin.Select();
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabAdmin;
                             ((MainForm)parentForm).btn_BackUpCSDL.Enabled = true;
                             ((MainForm)parentForm).btn_RestoreCSDL.Enabled = true;
                             break;
                         default:
-                            ((MainForm)parentForm).tabQLK.Select();
+                            ((MainForm)parentForm).tabPanel.SelectedPage = ((MainForm)parentForm).tabQLK;
                             enableAllButton();
                             break;
                     }
@@ -185,6 +184,18 @@ namespace Presentation_Tier
             //Hệ thống:
             ((MainForm)parentForm).btn_QLNV.Enabled = true;
             ((MainForm)parentForm).btn_thayDoiQuyDinh.Enabled = true;
+        }
+
+        private void textEdit_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
+        }
+
+        private void textEdit_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
         }
     }
 }

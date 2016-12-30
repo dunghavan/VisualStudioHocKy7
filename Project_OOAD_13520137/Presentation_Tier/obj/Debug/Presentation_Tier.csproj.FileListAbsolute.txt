@@ -207,6 +207,8 @@ C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presen
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_EditBCTonKho.resources
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_ListBCTonKho.resources
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_ListButton_BCTonKho.resources
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_ThayDoiQuyDinh.resources
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.ThayDoiQuyDinh_ListButton.resources
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.MainForm.resources
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_AddBCCongNoKH.resources
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\Presentation_Tier\obj\Debug\Presentation_Tier.UserControl_EditBCCongNoKH.resources

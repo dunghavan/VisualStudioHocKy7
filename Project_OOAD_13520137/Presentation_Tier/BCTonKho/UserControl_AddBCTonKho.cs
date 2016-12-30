@@ -31,15 +31,21 @@ namespace Presentation_Tier
         public UserControl_AddBCTonKho()
         {
             InitializeComponent();
+            try
+            {
+                tableSanPham = objSPBus.getAllSanPham();
+                //Khởi tạo item cho comboBox mã SP:
+                foreach (DataRow dr in tableSanPham.Rows)
+                    if (!comboBox_maSP.Properties.Items.Contains(dr["MaSP"].ToString()))
+                        comboBox_maSP.Properties.Items.Add(dr["MaSP"].ToString());
 
-            tableSanPham = objSPBus.getAllSanPham();
-            //Khởi tạo item cho comboBox mã SP:
-            foreach (DataRow dr in tableSanPham.Rows)
-                if (!comboBox_maSP.Properties.Items.Contains(dr["MaSP"].ToString()))
-                    comboBox_maSP.Properties.Items.Add(dr["MaSP"].ToString());
-
-            //
-            dateEdit_ngayLap.Focus();
+                //
+                dateEdit_ngayLap.Focus();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi khi load dữ liệu: " + ex.Message);
+            }
         }
         
         private void btn_Huy_Click(object sender, EventArgs e)
@@ -85,77 +91,97 @@ namespace Presentation_Tier
         
         private void comboBox_maSP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            maSPSelected = comboBox_maSP.Text;
-            textEdit_slPhatSinh.Text = "0";
-            tinhSLNhapXuat_TonCuoiKy();
+            try
+            {
+                maSPSelected = comboBox_maSP.Text;
+                textEdit_slPhatSinh.Text = "0";
+                tinhSLNhapXuat_TonCuoiKy();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi chọn mã SP: " + ex.Message);
+            }
         }
 
         BCTonKhoBUS objBCBUS = new BCTonKhoBUS();
         private void tinhSLNhapXuat_TonCuoiKy()
         {
-            int slTonKyDau = 0;
-            //Tính tồn của tháng trước:
-            ngayLapSelected = Convert.ToDateTime(dateEdit_ngayLap.Text);
-            if (ngayLapSelected.Month == 1)
+            try
             {
-                slTonKyDau = objBCBUS.getSLTonKyCuoi(maSPSelected, 12, ngayLapSelected.Year - 1);
-            }
-            else
-            {
-                slTonKyDau = objBCBUS.getSLTonKyCuoi(maSPSelected, ngayLapSelected.Month - 1, ngayLapSelected.Year);
-            }
-            textEdit_slTonKyDau.Text = slTonKyDau.ToString();
-            //Tính SL nhập, xuất của tháng này:
-            int slNhap = 0, slXuat = 0;
-            slNhap = objBCBUS.getSLNhap(maSPSelected, ngayLapSelected.Month, ngayLapSelected.Year);
-            textEdit_slNhap.Text = slNhap.ToString();
-            slXuat = objBCBUS.getSLXuat(maSPSelected, ngayLapSelected.Month, ngayLapSelected.Year);
-            textEdit_slXuat.Text = slXuat.ToString();
+                int slTonKyDau = 0;
+                //Tính tồn của tháng trước:
+                ngayLapSelected = Convert.ToDateTime(dateEdit_ngayLap.Text);
+                if (ngayLapSelected.Month == 1)
+                {
+                    slTonKyDau = objBCBUS.getSLTonKyCuoi(maSPSelected, 12, ngayLapSelected.Year - 1);
+                }
+                else
+                {
+                    slTonKyDau = objBCBUS.getSLTonKyCuoi(maSPSelected, ngayLapSelected.Month - 1, ngayLapSelected.Year);
+                }
+                textEdit_slTonKyDau.Text = slTonKyDau.ToString();
+                //Tính SL nhập, xuất của tháng này:
+                int slNhap = 0, slXuat = 0;
+                slNhap = objBCBUS.getSLNhap(maSPSelected, ngayLapSelected.Month, ngayLapSelected.Year);
+                textEdit_slNhap.Text = slNhap.ToString();
+                slXuat = objBCBUS.getSLXuat(maSPSelected, ngayLapSelected.Month, ngayLapSelected.Year);
+                textEdit_slXuat.Text = slXuat.ToString();
 
-            //Tính SL tồn cuối tháng này:
-            tempSLPhatSinh = textEdit_slPhatSinh.Text;
-            if (textEdit_slPhatSinh.Text.Length == 0)
-                tempSLPhatSinh = "0";
-            if (checkSLPhatSinh())
-            {
-                textEdit_slTonCuoiKy.Text = (slTonKyDau + slNhap - slXuat + Convert.ToInt32(tempSLPhatSinh)).ToString();
+                //Tính SL tồn cuối tháng này:
+                tempSLPhatSinh = textEdit_slPhatSinh.Text;
+                if (textEdit_slPhatSinh.Text.Length == 0)
+                    tempSLPhatSinh = "0";
+                if (checkSLPhatSinh())
+                {
+                    textEdit_slTonCuoiKy.Text = (slTonKyDau + slNhap - slXuat + Convert.ToInt32(tempSLPhatSinh)).ToString();
+                }
+                else
+                {
+                    //XtraMessageBox.Show("Không thể tính SL tồn cuối kỳ!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //XtraMessageBox.Show("Không thể tính SL tồn cuối kỳ!");
+                XtraMessageBox.Show("Lỗi tính tồn cuối kỳ: " + ex.Message);
             }
-
         }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if(checkAddNewInformation())
+            try
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                BCTonKho tempBaoCao = new BCTonKho(Convert.ToDateTime(tempNgayLap), tempMaSP, Convert.ToInt32(tempSLTonKyDau), Convert.ToInt32(tempSLNhap), Convert.ToInt32(tempSLXuat), Convert.ToInt32(tempSLPhatSinh), Convert.ToInt32(tempSLTonCuoiKy), tempGhiChu);
-                bool inserted = false;
-                inserted = UserControl_ListBCTonKho.objBCBus.addBaoCao(tempBaoCao);
-                if (inserted)
+                if (checkAddNewInformation())
                 {
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    BCTonKho tempBaoCao = new BCTonKho(Convert.ToDateTime(tempNgayLap), tempMaSP, Convert.ToInt32(tempSLTonKyDau), Convert.ToInt32(tempSLNhap), Convert.ToInt32(tempSLXuat), Convert.ToInt32(tempSLPhatSinh), Convert.ToInt32(tempSLTonCuoiKy), tempGhiChu);
+                    bool inserted = false;
+                    inserted = UserControl_ListBCTonKho.objBCBus.addBaoCao(tempBaoCao);
+                    if (inserted)
+                    {
 
-                    Form parentForm = this.FindForm();
-                    UserControl_ListBCTonKho.Instance.loadDanhSachBaoCao();
-                    if(!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListBCTonKho.Instance))
-                        ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListBCTonKho.Instance);
-                    UserControl_ListBCTonKho.Instance.BringToFront();
+                        Form parentForm = this.FindForm();
+                        UserControl_ListBCTonKho.Instance.loadDanhSachBaoCao();
+                        if (!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListBCTonKho.Instance))
+                            ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListBCTonKho.Instance);
+                        UserControl_ListBCTonKho.Instance.BringToFront();
 
-                    UserControl_ListBCTonKho.Instance.label_notification.Text = "Thêm thành công!";
+                        UserControl_ListBCTonKho.Instance.label_notification.Text = "Thêm thành công!";
 
-                    //Enable/Disable các btn:
-                    UserControl_ListButton_BCTonKho.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_BCTonKho.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_BCTonKho.Instance.btn_Xoa.Enabled = false;
+                        //Enable/Disable các btn:
+                        UserControl_ListButton_BCTonKho.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_BCTonKho.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_BCTonKho.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Thêm không thành công!");
                 }
                 else
-                    XtraMessageBox.Show("Thêm không thành công!");
+                {
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                
+                XtraMessageBox.Show("Lỗi lưu dữ liệu: " + ex.Message);
             }
         }
 

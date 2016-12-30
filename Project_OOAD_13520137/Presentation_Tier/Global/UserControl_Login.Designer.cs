@@ -85,6 +85,7 @@
             this.textEdit_password.Properties.UseSystemPasswordChar = true;
             this.textEdit_password.Size = new System.Drawing.Size(181, 20);
             this.textEdit_password.TabIndex = 1;
+            this.textEdit_password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit_password_KeyDown);
             // 
             // lb_username
             // 
@@ -104,6 +105,7 @@
             this.textEdit_username.Name = "textEdit_username";
             this.textEdit_username.Size = new System.Drawing.Size(181, 20);
             this.textEdit_username.TabIndex = 0;
+            this.textEdit_username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit_username_KeyDown);
             // 
             // label_tittle
             // 
@@ -122,15 +124,14 @@
             // pictureEdit1
             // 
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.EditValue = global::Presentation_Tier.Properties.Resources.icon;
-            this.pictureEdit1.Location = new System.Drawing.Point(499, 226);
+            this.pictureEdit1.Location = new System.Drawing.Point(3, 288);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
-            this.pictureEdit1.Size = new System.Drawing.Size(369, 96);
+            this.pictureEdit1.Size = new System.Drawing.Size(1367, 69);
             this.pictureEdit1.TabIndex = 5;
             // 
             // UserControl_Login

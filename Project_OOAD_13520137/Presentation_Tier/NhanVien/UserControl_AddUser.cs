@@ -86,29 +86,36 @@ namespace Presentation_Tier
         {
             if(checkAddNewInformation())
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                NhanVien tempNhanVien = new NhanVien(tempMaNV, tempHoTen, Convert.ToInt32(tempNamSinh), tempGioiTinh,
-                                                    tempSDT, tempEmail, tempUsername, tempPassword, tempMaLoaiNV, tempIsActive);
-                bool inserted = false;
-                inserted = UserControl_ListUser.objNVBus.addNhanVien(tempNhanVien);
-                if (inserted)
+                try
                 {
-                    //Trở về màn hình List:
-                    Form parentForm = this.FindForm();
-                    UserControl_ListUser.Instance.loadDanhSachNV();
-                    if(!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListUser.Instance))
-                        ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListUser.Instance);
-                    UserControl_ListUser.Instance.BringToFront();
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    NhanVien tempNhanVien = new NhanVien(tempMaNV, tempHoTen, Convert.ToInt32(tempNamSinh), tempGioiTinh,
+                                                        tempSDT, tempEmail, tempUsername, tempPassword, tempMaLoaiNV, tempIsActive);
+                    bool inserted = false;
+                    inserted = UserControl_ListUser.objNVBus.addNhanVien(tempNhanVien);
+                    if (inserted)
+                    {
+                        //Trở về màn hình List:
+                        Form parentForm = this.FindForm();
+                        UserControl_ListUser.Instance.loadDanhSachNV();
+                        if (!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ListUser.Instance))
+                            ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ListUser.Instance);
+                        UserControl_ListUser.Instance.BringToFront();
 
-                    UserControl_ListUser.Instance.label_notification.Text = "Thêm thành công!";
+                        UserControl_ListUser.Instance.label_notification.Text = "Thêm thành công!";
 
-                    //Enable/disable các btn:
-                    UserControl_ListButton_User.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_User.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_User.Instance.btn_Xoa.Enabled = false;
+                        //Enable/disable các btn:
+                        UserControl_ListButton_User.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_User.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_User.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Thêm không thành công!");
                 }
-                else
-                    XtraMessageBox.Show("Thêm không thành công!");
+                catch(Exception ex)
+                {
+                    XtraMessageBox.Show("Lỗi lưu nhân viên: " + ex.Message);
+                }
             }
             else
             {

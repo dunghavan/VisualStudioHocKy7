@@ -33,12 +33,20 @@ namespace Presentation_Tier
         public UserControl_EditPhieuThu()
         {
             InitializeComponent();
-            UserControl_AddPhieuThu.tableKhachHang = UserControl_AddPhieuThu.objKHBus.Load_DSKhachHang();
-            //Khởi tạo item cho comboBox mã KH:
-            foreach (DataRow dr in UserControl_AddPhieuThu.tableKhachHang.Rows)
-                if (!comboBox_makH.Properties.Items.Contains(dr["MaKH"].ToString()))
-                    comboBox_makH.Properties.Items.Add(dr["MaKH"].ToString());
-            //comboBox_makH.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            try
+            {
+                UserControl_AddPhieuThu.tableKhachHang = UserControl_AddPhieuThu.objKHBus.Load_DSKhachHang();
+                //Khởi tạo item cho comboBox mã KH:
+                foreach (DataRow dr in UserControl_AddPhieuThu.tableKhachHang.Rows)
+                    if (!comboBox_makH.Properties.Items.Contains(dr["MaKH"].ToString()))
+                        comboBox_makH.Properties.Items.Add(dr["MaKH"].ToString());
+                //comboBox_makH.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi load dữ liệu: " + ex.Message);
+            }
+            
         }
 
         string _maKHSelected;
@@ -50,6 +58,8 @@ namespace Presentation_Tier
         public PhieuThuBUS objPTBUS = new PhieuThuBUS();
         private void tinhTongTienNo()
         {
+            try
+            {
             //Khởi tạo giá trị tổng tiền nợ từ trước dựa vào mã KH:
             if ((textEdit_soTienNo.Text.Length > 0) && (textEdit_soTienThu.Text.Length > 0))
                 if (checkTienNo_TienThu())
@@ -58,6 +68,11 @@ namespace Presentation_Tier
                     int tienNoMoi = Convert.ToInt32(textEdit_soTienNo.Text) - Convert.ToInt32(textEdit_soTienThu.Text);
                     textEdit_TongTienNo.Text = (tienNoTuTruoc + tienNoMoi).ToString();
                 }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show("Lỗi tính tổng tiền nợ: " + ex.Message);
+            }
 
         }
         public void loadDataFromGridview()
@@ -103,24 +118,31 @@ namespace Presentation_Tier
         {
             if (checkUpdateInformation())
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                PhieuThu tempPhieuThu = new PhieuThu(tempMaPT, Convert.ToDateTime(tempNgayLap), tempMaNV, tempMaKH,
-                                                    tempSoTienNo, tempSoTienThu);
-                bool updated = false;
-                updated = UserControl_ListPhieuThu.objPhieuThuBUS.updatePhieuThu(tempPhieuThu);
-                if (updated)
+                try
                 {
-                    //Trở về màn hình List:
-                    UserControl_ListPhieuThu.Instance.loadDanhSachPhieuThu();
-                    UserControl_ListPhieuThu.Instance.BringToFront();
-                    UserControl_ListPhieuThu.Instance.label_notification.Text = "Cập nhật thành công!";
-                    //Enable/Disable các btn:
-                    UserControl_ListButton_PhieuThu.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_PhieuThu.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_PhieuThu.Instance.btn_Xoa.Enabled = false;
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    PhieuThu tempPhieuThu = new PhieuThu(tempMaPT, Convert.ToDateTime(tempNgayLap), tempMaNV, tempMaKH,
+                                                        tempSoTienNo, tempSoTienThu);
+                    bool updated = false;
+                    updated = UserControl_ListPhieuThu.objPhieuThuBUS.updatePhieuThu(tempPhieuThu);
+                    if (updated)
+                    {
+                        //Trở về màn hình List:
+                        UserControl_ListPhieuThu.Instance.loadDanhSachPhieuThu();
+                        UserControl_ListPhieuThu.Instance.BringToFront();
+                        UserControl_ListPhieuThu.Instance.label_notification.Text = "Cập nhật thành công!";
+                        //Enable/Disable các btn:
+                        UserControl_ListButton_PhieuThu.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_PhieuThu.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_PhieuThu.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Cập nhật không thành công!");
                 }
-                else
-                    XtraMessageBox.Show("Cập nhật không thành công!");
+                catch(Exception ex)
+                {
+                    XtraMessageBox.Show("Lỗi lưu thông tin: " + ex.Message);
+                }
             }
             else
             {

@@ -71,33 +71,39 @@ namespace Presentation_Tier
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (checkUpdateInformation())
+            try
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                BCCongNoKH tempBaoCao = new BCCongNoKH(Convert.ToDateTime(tempNgayLap), tempMaKH, tempMaNV
-                                                       , Convert.ToInt32(tempNoKyDau), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempNoKyCuoi), tempGhiChu);
-                bool updated = false;
-                updated = UserControl_ListBCCongNoKH.objBCBus.updateBaoCao(tempBaoCao);
-                if (updated)
+                if (checkUpdateInformation())
                 {
-                    //XtraMessageBox.Show("Cập nhật thành công!");
-                    UserControl_ListBCCongNoKH.Instance.loadDanhSachBaoCao();
-                    UserControl_ListBCCongNoKH.Instance.BringToFront();
-                    UserControl_ListBCCongNoKH.Instance.label_notification.Text = "Cập nhật thành công!";
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    BCCongNoKH tempBaoCao = new BCCongNoKH(Convert.ToDateTime(tempNgayLap), tempMaKH, tempMaNV
+                                                           , Convert.ToInt32(tempNoKyDau), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempNoKyCuoi), tempGhiChu);
+                    bool updated = false;
+                    updated = UserControl_ListBCCongNoKH.objBCBus.updateBaoCao(tempBaoCao);
+                    if (updated)
+                    {
+                        //XtraMessageBox.Show("Cập nhật thành công!");
+                        UserControl_ListBCCongNoKH.Instance.loadDanhSachBaoCao();
+                        UserControl_ListBCCongNoKH.Instance.BringToFront();
+                        UserControl_ListBCCongNoKH.Instance.label_notification.Text = "Cập nhật thành công!";
 
-                    //Enable/Disable các btn:
-                    UserControl_ListButton_BCCongNoKH.Instance.btn_themMoi.Enabled = true;
-                    //UserControl_ListButton_BCCongNoKH.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_BCCongNoKH.Instance.btn_Xoa.Enabled = false;
+                        //Enable/Disable các btn:
+                        UserControl_ListButton_BCCongNoKH.Instance.btn_themMoi.Enabled = true;
+                        //UserControl_ListButton_BCCongNoKH.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_BCCongNoKH.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Cập nhật không thành công!");
                 }
                 else
-                    XtraMessageBox.Show("Cập nhật không thành công!");
+                {
+
+                }
             }
-            else
+            catch(Exception ex)
             {
-
+                XtraMessageBox.Show("Lỗi khi lưu: "+ ex.Message);
             }
-
 
         }
         private bool checkUpdateInformation() //Kiểm tra các thông tin mới trên form:

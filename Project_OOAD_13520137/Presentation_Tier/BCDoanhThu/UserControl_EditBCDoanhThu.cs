@@ -28,7 +28,6 @@ namespace Presentation_Tier
         //Tạo các biến lưu giá trị trên màn hình:
         string tempNgayLap, tempMaSP, tempTongChi, tempPhatSinh, tempTongThu, tempLoiNhuan, tempGhiChu;
         int loiNhuan = 0;
-        int phatSinh = 0;
 
         private void textEdit_slPhatSinh_EditValueChanged(object sender, EventArgs e)
         {
@@ -49,7 +48,7 @@ namespace Presentation_Tier
             }
             catch(Exception e)
             {
-                XtraMessageBox.Show("Lỗi khi tính lợi nhuận!");
+                XtraMessageBox.Show("Lỗi khi tính lợi nhuận: " + e.Message);
             }
         }
 
@@ -97,33 +96,38 @@ namespace Presentation_Tier
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
-            if (checkUpdateInformation())
+            try
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                BCDoanhThu tempBaoCao = new BCDoanhThu(Convert.ToDateTime(tempNgayLap), tempMaSP, Convert.ToInt32(tempTongChi), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempTongThu), Convert.ToInt32(tempLoiNhuan),  tempGhiChu);
-                bool updated = false;
-                updated = UserControl_ListBCDoanhThu.objBCBus.updateBaoCao(tempBaoCao);
-                if (updated)
+                if (checkUpdateInformation())
                 {
-                    //XtraMessageBox.Show("Cập nhật thành công!");
-                    UserControl_ListBCDoanhThu.Instance.loadDanhSachBaoCao();
-                    UserControl_ListBCDoanhThu.Instance.BringToFront();
-                    UserControl_ListBCDoanhThu.Instance.label_notification.Text = "Cập nhật thành công!";
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    BCDoanhThu tempBaoCao = new BCDoanhThu(Convert.ToDateTime(tempNgayLap), tempMaSP, Convert.ToInt32(tempTongChi), Convert.ToInt32(tempPhatSinh), Convert.ToInt32(tempTongThu), Convert.ToInt32(tempLoiNhuan), tempGhiChu);
+                    bool updated = false;
+                    updated = UserControl_ListBCDoanhThu.objBCBus.updateBaoCao(tempBaoCao);
+                    if (updated)
+                    {
+                        //XtraMessageBox.Show("Cập nhật thành công!");
+                        UserControl_ListBCDoanhThu.Instance.loadDanhSachBaoCao();
+                        UserControl_ListBCDoanhThu.Instance.BringToFront();
+                        UserControl_ListBCDoanhThu.Instance.label_notification.Text = "Cập nhật thành công!";
 
-                    //Enable/Disable các btn:
-                    UserControl_ListButton_BCDoanhThu.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_BCDoanhThu.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_BCDoanhThu.Instance.btn_Xoa.Enabled = false;
+                        //Enable/Disable các btn:
+                        UserControl_ListButton_BCDoanhThu.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_BCDoanhThu.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_BCDoanhThu.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Cập nhật không thành công!");
                 }
                 else
-                    XtraMessageBox.Show("Cập nhật không thành công!");
+                {
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-
+                XtraMessageBox.Show("Lỗi khi lưu báo cáo: " + ex.Message);
             }
-
-
         }
         private bool checkUpdateInformation() //Kiểm tra các thông tin mới trên form:
         {

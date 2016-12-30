@@ -106,7 +106,7 @@
             this.richTextBox_ghiChu.MaxLength = 100;
             this.richTextBox_ghiChu.Name = "richTextBox_ghiChu";
             this.richTextBox_ghiChu.Size = new System.Drawing.Size(336, 98);
-            this.richTextBox_ghiChu.TabIndex = 3;
+            this.richTextBox_ghiChu.TabIndex = 6;
             this.richTextBox_ghiChu.Text = "";
             // 
             // groupControl2
@@ -126,12 +126,13 @@
             // 
             this.textEdit_noKyCuoi.EditValue = "";
             this.textEdit_noKyCuoi.Enabled = false;
-            this.textEdit_noKyCuoi.Location = new System.Drawing.Point(168, 161);
+            this.textEdit_noKyCuoi.Location = new System.Drawing.Point(178, 161);
             this.textEdit_noKyCuoi.Name = "textEdit_noKyCuoi";
             this.textEdit_noKyCuoi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_noKyCuoi.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_noKyCuoi.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_noKyCuoi.TabIndex = 6;
+            this.textEdit_noKyCuoi.Properties.MaxLength = 20;
+            this.textEdit_noKyCuoi.Size = new System.Drawing.Size(151, 26);
+            this.textEdit_noKyCuoi.TabIndex = 5;
             // 
             // label_noKyDau
             // 
@@ -167,26 +168,27 @@
             // 
             this.textEdit_noKyDau.EditValue = "";
             this.textEdit_noKyDau.Enabled = false;
-            this.textEdit_noKyDau.Location = new System.Drawing.Point(168, 53);
+            this.textEdit_noKyDau.Location = new System.Drawing.Point(178, 53);
             this.textEdit_noKyDau.Name = "textEdit_noKyDau";
             this.textEdit_noKyDau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_noKyDau.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_noKyDau.Properties.MaxLength = 20;
             this.textEdit_noKyDau.Properties.NullText = "0";
-            this.textEdit_noKyDau.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_noKyDau.TabIndex = 5;
+            this.textEdit_noKyDau.Size = new System.Drawing.Size(151, 26);
+            this.textEdit_noKyDau.TabIndex = 3;
             // 
             // textEdit_phatSinh
             // 
             this.textEdit_phatSinh.EditValue = "";
             this.textEdit_phatSinh.Enabled = false;
-            this.textEdit_phatSinh.Location = new System.Drawing.Point(168, 108);
+            this.textEdit_phatSinh.Location = new System.Drawing.Point(178, 108);
             this.textEdit_phatSinh.Name = "textEdit_phatSinh";
             this.textEdit_phatSinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_phatSinh.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_phatSinh.Properties.MaxLength = 10;
+            this.textEdit_phatSinh.Properties.MaxLength = 20;
             this.textEdit_phatSinh.Properties.NullText = "0";
-            this.textEdit_phatSinh.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_phatSinh.TabIndex = 2;
+            this.textEdit_phatSinh.Size = new System.Drawing.Size(151, 26);
+            this.textEdit_phatSinh.TabIndex = 4;
             this.textEdit_phatSinh.EditValueChanged += new System.EventHandler(this.textEdit_phatSinh_EditValueChanged);
             // 
             // groupControl1
@@ -209,9 +211,9 @@
             this.textEdit_maNV.Name = "textEdit_maNV";
             this.textEdit_maNV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_maNV.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_maNV.Properties.MaxLength = 8;
+            this.textEdit_maNV.Properties.MaxLength = 20;
             this.textEdit_maNV.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_maNV.TabIndex = 3;
+            this.textEdit_maNV.TabIndex = 2;
             this.textEdit_maNV.EditValueChanged += new System.EventHandler(this.textEdit_maNV_EditValueChanged);
             // 
             // label_ngayLap
@@ -282,7 +284,7 @@
             this.btn_Huy.Location = new System.Drawing.Point(1183, 282);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(108, 38);
-            this.btn_Huy.TabIndex = 5;
+            this.btn_Huy.TabIndex = 8;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
@@ -294,7 +296,7 @@
             this.btn_Luu.Location = new System.Drawing.Point(1044, 282);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(108, 38);
-            this.btn_Luu.TabIndex = 4;
+            this.btn_Luu.TabIndex = 7;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 

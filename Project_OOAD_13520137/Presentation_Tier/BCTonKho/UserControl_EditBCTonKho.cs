@@ -116,8 +116,7 @@ namespace Presentation_Tier
             {
 
             }
-
-
+            
         }
         private bool checkUpdateInformation() //Kiểm tra các thông tin mới trên form:
         {

@@ -52,14 +52,14 @@
             this.label_confirmPass = new DevExpress.XtraEditors.LabelControl();
             this.textEdit_confirmPassword = new DevExpress.XtraEditors.TextEdit();
             this.groupControl_EditUser = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.radio_kichHoat = new System.Windows.Forms.RadioButton();
             this.radio_voHieuHoa = new System.Windows.Forms.RadioButton();
             this.label_trangThai = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Huy = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_maNV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_hoTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_SDT.Properties)).BeginInit();
@@ -71,12 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_confirmPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_EditUser)).BeginInit();
             this.groupControl_EditUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textEdit_maNV
@@ -125,6 +125,7 @@
             this.textEdit_hoTen.Name = "textEdit_hoTen";
             this.textEdit_hoTen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_hoTen.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_hoTen.Properties.MaxLength = 30;
             this.textEdit_hoTen.Size = new System.Drawing.Size(161, 26);
             this.textEdit_hoTen.TabIndex = 1;
             // 
@@ -178,6 +179,7 @@
             this.textEdit_SDT.Name = "textEdit_SDT";
             this.textEdit_SDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_SDT.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_SDT.Properties.MaxLength = 20;
             this.textEdit_SDT.Size = new System.Drawing.Size(161, 26);
             this.textEdit_SDT.TabIndex = 5;
             // 
@@ -197,6 +199,7 @@
             this.textEdit_email.Name = "textEdit_email";
             this.textEdit_email.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_email.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_email.Properties.MaxLength = 30;
             this.textEdit_email.Size = new System.Drawing.Size(161, 26);
             this.textEdit_email.TabIndex = 6;
             // 
@@ -237,6 +240,7 @@
             this.textEdit_username.Name = "textEdit_username";
             this.textEdit_username.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_username.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_username.Properties.MaxLength = 30;
             this.textEdit_username.Size = new System.Drawing.Size(161, 26);
             this.textEdit_username.TabIndex = 8;
             // 
@@ -269,6 +273,7 @@
             this.textEdit_password.Name = "textEdit_password";
             this.textEdit_password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_password.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_password.Properties.MaxLength = 30;
             this.textEdit_password.Size = new System.Drawing.Size(161, 26);
             this.textEdit_password.TabIndex = 9;
             // 
@@ -298,6 +303,7 @@
             this.textEdit_confirmPassword.Name = "textEdit_confirmPassword";
             this.textEdit_confirmPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_confirmPassword.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_confirmPassword.Properties.MaxLength = 30;
             this.textEdit_confirmPassword.Size = new System.Drawing.Size(161, 26);
             this.textEdit_confirmPassword.TabIndex = 10;
             // 
@@ -314,20 +320,15 @@
             this.groupControl_EditUser.TabIndex = 15;
             this.groupControl_EditUser.Text = "Chỉnh sửa thông tin nhân viên";
             // 
-            // groupControl1
+            // groupControl2
             // 
-            this.groupControl1.Controls.Add(this.textEdit_confirmPassword);
-            this.groupControl1.Controls.Add(this.label_confirmPass);
-            this.groupControl1.Controls.Add(this.label_username);
-            this.groupControl1.Controls.Add(this.label_password);
-            this.groupControl1.Controls.Add(this.textEdit_username);
-            this.groupControl1.Controls.Add(this.textEdit_password);
-            this.groupControl1.Controls.Add(this.comboBox_maLoaiNV);
-            this.groupControl1.Controls.Add(this.label_loaiNV);
-            this.groupControl1.Location = new System.Drawing.Point(415, 37);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(371, 283);
-            this.groupControl1.TabIndex = 16;
+            this.groupControl2.Controls.Add(this.radio_kichHoat);
+            this.groupControl2.Controls.Add(this.radio_voHieuHoa);
+            this.groupControl2.Controls.Add(this.label_trangThai);
+            this.groupControl2.Location = new System.Drawing.Point(847, 37);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(355, 167);
+            this.groupControl2.TabIndex = 16;
             // 
             // radio_kichHoat
             // 
@@ -363,6 +364,40 @@
             this.label_trangThai.TabIndex = 18;
             this.label_trangThai.Text = "Trạng Thái:";
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.label_namSinh);
+            this.groupControl3.Controls.Add(this.textEdit_hoTen);
+            this.groupControl3.Controls.Add(this.comboBox_namSinh);
+            this.groupControl3.Controls.Add(this.label_hintEmail);
+            this.groupControl3.Controls.Add(this.label_hoTen);
+            this.groupControl3.Controls.Add(this.label_email);
+            this.groupControl3.Controls.Add(this.textEdit_email);
+            this.groupControl3.Controls.Add(this.label_soDT);
+            this.groupControl3.Controls.Add(this.textEdit_SDT);
+            this.groupControl3.Controls.Add(this.radioBtn_Nu);
+            this.groupControl3.Controls.Add(this.radioBtn_Nam);
+            this.groupControl3.Controls.Add(this.label_gioiTinh);
+            this.groupControl3.Location = new System.Drawing.Point(20, 37);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(371, 283);
+            this.groupControl3.TabIndex = 16;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.textEdit_confirmPassword);
+            this.groupControl1.Controls.Add(this.label_confirmPass);
+            this.groupControl1.Controls.Add(this.label_username);
+            this.groupControl1.Controls.Add(this.label_password);
+            this.groupControl1.Controls.Add(this.textEdit_username);
+            this.groupControl1.Controls.Add(this.textEdit_password);
+            this.groupControl1.Controls.Add(this.comboBox_maLoaiNV);
+            this.groupControl1.Controls.Add(this.label_loaiNV);
+            this.groupControl1.Location = new System.Drawing.Point(415, 37);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(371, 283);
+            this.groupControl1.TabIndex = 16;
+            // 
             // btn_Huy
             // 
             this.btn_Huy.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,35 +422,6 @@
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.radio_kichHoat);
-            this.groupControl2.Controls.Add(this.radio_voHieuHoa);
-            this.groupControl2.Controls.Add(this.label_trangThai);
-            this.groupControl2.Location = new System.Drawing.Point(847, 37);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(355, 167);
-            this.groupControl2.TabIndex = 16;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.label_namSinh);
-            this.groupControl3.Controls.Add(this.textEdit_hoTen);
-            this.groupControl3.Controls.Add(this.comboBox_namSinh);
-            this.groupControl3.Controls.Add(this.label_hintEmail);
-            this.groupControl3.Controls.Add(this.label_hoTen);
-            this.groupControl3.Controls.Add(this.label_email);
-            this.groupControl3.Controls.Add(this.textEdit_email);
-            this.groupControl3.Controls.Add(this.label_soDT);
-            this.groupControl3.Controls.Add(this.textEdit_SDT);
-            this.groupControl3.Controls.Add(this.radioBtn_Nu);
-            this.groupControl3.Controls.Add(this.radioBtn_Nam);
-            this.groupControl3.Controls.Add(this.label_gioiTinh);
-            this.groupControl3.Location = new System.Drawing.Point(20, 37);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(371, 283);
-            this.groupControl3.TabIndex = 16;
-            // 
             // UserControl_EditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,15 +442,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_confirmPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_EditUser)).EndInit();
             this.groupControl_EditUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -237,6 +237,7 @@
             this.textEdit_username.Name = "textEdit_username";
             this.textEdit_username.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_username.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_username.Properties.MaxLength = 30;
             this.textEdit_username.Size = new System.Drawing.Size(161, 26);
             this.textEdit_username.TabIndex = 8;
             // 
@@ -246,6 +247,7 @@
             this.textEdit_email.Name = "textEdit_email";
             this.textEdit_email.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_email.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_email.Properties.MaxLength = 30;
             this.textEdit_email.Size = new System.Drawing.Size(161, 26);
             this.textEdit_email.TabIndex = 6;
             // 
@@ -255,6 +257,7 @@
             this.textEdit_SDT.Name = "textEdit_SDT";
             this.textEdit_SDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_SDT.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_SDT.Properties.MaxLength = 20;
             this.textEdit_SDT.Size = new System.Drawing.Size(161, 26);
             this.textEdit_SDT.TabIndex = 5;
             // 
@@ -264,6 +267,7 @@
             this.textEdit_hoTen.Name = "textEdit_hoTen";
             this.textEdit_hoTen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_hoTen.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_hoTen.Properties.MaxLength = 20;
             this.textEdit_hoTen.Size = new System.Drawing.Size(161, 26);
             this.textEdit_hoTen.TabIndex = 1;
             // 
@@ -283,6 +287,7 @@
             this.textEdit_maNV.Name = "textEdit_maNV";
             this.textEdit_maNV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_maNV.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_maNV.Properties.MaxLength = 10;
             this.textEdit_maNV.Size = new System.Drawing.Size(161, 26);
             this.textEdit_maNV.TabIndex = 0;
             // 
@@ -292,6 +297,7 @@
             this.textEdit_password.Name = "textEdit_password";
             this.textEdit_password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_password.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_password.Properties.MaxLength = 30;
             this.textEdit_password.Size = new System.Drawing.Size(161, 26);
             this.textEdit_password.TabIndex = 9;
             // 
@@ -321,6 +327,7 @@
             this.textEdit_confirmPassword.Name = "textEdit_confirmPassword";
             this.textEdit_confirmPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_confirmPassword.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_confirmPassword.Properties.MaxLength = 30;
             this.textEdit_confirmPassword.Size = new System.Drawing.Size(161, 26);
             this.textEdit_confirmPassword.TabIndex = 10;
             // 

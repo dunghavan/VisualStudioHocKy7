@@ -32,29 +32,29 @@
             this.btn_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl_EditPhieuChi = new DevExpress.XtraEditors.GroupControl();
-            this.dateEdit_ngayLap = new DevExpress.XtraEditors.DateEdit();
-            this.label_maNV = new DevExpress.XtraEditors.LabelControl();
             this.comboBox_maNCC = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit_maNV = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit_maPhieuChi = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_soTienChi = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_soTienNo = new DevExpress.XtraEditors.TextEdit();
             this.label_mNCC = new DevExpress.XtraEditors.LabelControl();
-            this.label_ngayLap = new DevExpress.XtraEditors.LabelControl();
             this.label_soTienChi = new DevExpress.XtraEditors.LabelControl();
-            this.label_maPhieuChi = new DevExpress.XtraEditors.LabelControl();
             this.label_soTienNo = new DevExpress.XtraEditors.LabelControl();
+            this.dateEdit_ngayLap = new DevExpress.XtraEditors.DateEdit();
+            this.label_maNV = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit_maNV = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_maPhieuChi = new DevExpress.XtraEditors.TextEdit();
+            this.label_ngayLap = new DevExpress.XtraEditors.LabelControl();
+            this.label_maPhieuChi = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_EditPhieuChi)).BeginInit();
             this.groupControl_EditPhieuChi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox_maNCC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maNV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maPhieuChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_soTienChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_soTienNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maNV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maPhieuChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -98,6 +98,72 @@
             this.groupControl_EditPhieuChi.Size = new System.Drawing.Size(371, 283);
             this.groupControl_EditPhieuChi.TabIndex = 25;
             // 
+            // comboBox_maNCC
+            // 
+            this.comboBox_maNCC.AllowDrop = true;
+            this.comboBox_maNCC.Location = new System.Drawing.Point(142, 48);
+            this.comboBox_maNCC.Name = "comboBox_maNCC";
+            this.comboBox_maNCC.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_maNCC.Properties.Appearance.Options.UseFont = true;
+            this.comboBox_maNCC.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.comboBox_maNCC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBox_maNCC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBox_maNCC.Size = new System.Drawing.Size(161, 26);
+            this.comboBox_maNCC.TabIndex = 4;
+            // 
+            // textEdit_soTienChi
+            // 
+            this.textEdit_soTienChi.EditValue = "0";
+            this.textEdit_soTienChi.Location = new System.Drawing.Point(142, 189);
+            this.textEdit_soTienChi.Name = "textEdit_soTienChi";
+            this.textEdit_soTienChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_soTienChi.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_soTienChi.Properties.MaxLength = 20;
+            this.textEdit_soTienChi.Size = new System.Drawing.Size(161, 26);
+            this.textEdit_soTienChi.TabIndex = 6;
+            // 
+            // textEdit_soTienNo
+            // 
+            this.textEdit_soTienNo.EditValue = "0";
+            this.textEdit_soTienNo.Location = new System.Drawing.Point(142, 119);
+            this.textEdit_soTienNo.Name = "textEdit_soTienNo";
+            this.textEdit_soTienNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_soTienNo.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_soTienNo.Properties.MaxLength = 20;
+            this.textEdit_soTienNo.Size = new System.Drawing.Size(161, 26);
+            this.textEdit_soTienNo.TabIndex = 5;
+            // 
+            // label_mNCC
+            // 
+            this.label_mNCC.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_mNCC.Appearance.Options.UseFont = true;
+            this.label_mNCC.Location = new System.Drawing.Point(20, 49);
+            this.label_mNCC.Name = "label_mNCC";
+            this.label_mNCC.Size = new System.Drawing.Size(115, 19);
+            this.label_mNCC.TabIndex = 14;
+            this.label_mNCC.Text = "Mã Khách Hàng:";
+            // 
+            // label_soTienChi
+            // 
+            this.label_soTienChi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_soTienChi.Appearance.Options.UseFont = true;
+            this.label_soTienChi.Location = new System.Drawing.Point(20, 192);
+            this.label_soTienChi.Name = "label_soTienChi";
+            this.label_soTienChi.Size = new System.Drawing.Size(93, 19);
+            this.label_soTienChi.TabIndex = 17;
+            this.label_soTienChi.Text = "Số Tiền Thu:";
+            // 
+            // label_soTienNo
+            // 
+            this.label_soTienNo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_soTienNo.Appearance.Options.UseFont = true;
+            this.label_soTienNo.Location = new System.Drawing.Point(20, 122);
+            this.label_soTienNo.Name = "label_soTienNo";
+            this.label_soTienNo.Size = new System.Drawing.Size(85, 19);
+            this.label_soTienNo.TabIndex = 17;
+            this.label_soTienNo.Text = "Số Tiền Nợ:";
+            // 
             // dateEdit_ngayLap
             // 
             this.dateEdit_ngayLap.EditValue = new System.DateTime(2016, 12, 10, 0, 0, 0, 0);
@@ -125,20 +191,6 @@
             this.label_maNV.TabIndex = 21;
             this.label_maNV.Text = "Mã Nhân Viên:";
             // 
-            // comboBox_maNCC
-            // 
-            this.comboBox_maNCC.AllowDrop = true;
-            this.comboBox_maNCC.Location = new System.Drawing.Point(142, 48);
-            this.comboBox_maNCC.Name = "comboBox_maNCC";
-            this.comboBox_maNCC.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_maNCC.Properties.Appearance.Options.UseFont = true;
-            this.comboBox_maNCC.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.comboBox_maNCC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBox_maNCC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBox_maNCC.Size = new System.Drawing.Size(161, 26);
-            this.comboBox_maNCC.TabIndex = 4;
-            // 
             // textEdit_maNV
             // 
             this.textEdit_maNV.Enabled = false;
@@ -146,6 +198,7 @@
             this.textEdit_maNV.Name = "textEdit_maNV";
             this.textEdit_maNV.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_maNV.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_maNV.Properties.MaxLength = 10;
             this.textEdit_maNV.Size = new System.Drawing.Size(161, 26);
             this.textEdit_maNV.TabIndex = 3;
             // 
@@ -160,36 +213,6 @@
             this.textEdit_maPhieuChi.Size = new System.Drawing.Size(161, 26);
             this.textEdit_maPhieuChi.TabIndex = 1;
             // 
-            // textEdit_soTienChi
-            // 
-            this.textEdit_soTienChi.EditValue = "0";
-            this.textEdit_soTienChi.Location = new System.Drawing.Point(142, 189);
-            this.textEdit_soTienChi.Name = "textEdit_soTienChi";
-            this.textEdit_soTienChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit_soTienChi.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_soTienChi.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_soTienChi.TabIndex = 6;
-            // 
-            // textEdit_soTienNo
-            // 
-            this.textEdit_soTienNo.EditValue = "0";
-            this.textEdit_soTienNo.Location = new System.Drawing.Point(142, 119);
-            this.textEdit_soTienNo.Name = "textEdit_soTienNo";
-            this.textEdit_soTienNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit_soTienNo.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_soTienNo.Size = new System.Drawing.Size(161, 26);
-            this.textEdit_soTienNo.TabIndex = 5;
-            // 
-            // label_mNCC
-            // 
-            this.label_mNCC.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_mNCC.Appearance.Options.UseFont = true;
-            this.label_mNCC.Location = new System.Drawing.Point(20, 49);
-            this.label_mNCC.Name = "label_mNCC";
-            this.label_mNCC.Size = new System.Drawing.Size(115, 19);
-            this.label_mNCC.TabIndex = 14;
-            this.label_mNCC.Text = "Mã Khách Hàng:";
-            // 
             // label_ngayLap
             // 
             this.label_ngayLap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,16 +223,6 @@
             this.label_ngayLap.TabIndex = 16;
             this.label_ngayLap.Text = "Ngày Lập:";
             // 
-            // label_soTienChi
-            // 
-            this.label_soTienChi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_soTienChi.Appearance.Options.UseFont = true;
-            this.label_soTienChi.Location = new System.Drawing.Point(20, 192);
-            this.label_soTienChi.Name = "label_soTienChi";
-            this.label_soTienChi.Size = new System.Drawing.Size(93, 19);
-            this.label_soTienChi.TabIndex = 17;
-            this.label_soTienChi.Text = "Số Tiền Thu:";
-            // 
             // label_maPhieuChi
             // 
             this.label_maPhieuChi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,16 +232,6 @@
             this.label_maPhieuChi.Size = new System.Drawing.Size(98, 19);
             this.label_maPhieuChi.TabIndex = 16;
             this.label_maPhieuChi.Text = "Mã Phiếu Chi:";
-            // 
-            // label_soTienNo
-            // 
-            this.label_soTienNo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_soTienNo.Appearance.Options.UseFont = true;
-            this.label_soTienNo.Location = new System.Drawing.Point(20, 122);
-            this.label_soTienNo.Name = "label_soTienNo";
-            this.label_soTienNo.Size = new System.Drawing.Size(85, 19);
-            this.label_soTienNo.TabIndex = 17;
-            this.label_soTienNo.Text = "Số Tiền Nợ:";
             // 
             // groupControl1
             // 
@@ -265,13 +268,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_EditPhieuChi)).EndInit();
             this.groupControl_EditPhieuChi.ResumeLayout(false);
             this.groupControl_EditPhieuChi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox_maNCC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maNV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maPhieuChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_soTienChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_soTienNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_ngayLap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maNV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_maPhieuChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

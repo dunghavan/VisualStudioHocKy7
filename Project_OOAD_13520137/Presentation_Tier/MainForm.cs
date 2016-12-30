@@ -27,31 +27,9 @@ namespace Presentation_Tier
         {
 
         }
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            
-            if (!mainPanel.Controls.Contains(UserControl_Login.Instance))
-                mainPanel.Controls.Add(UserControl_Login.Instance);
-            UserControl_Login.Instance.Dock = DockStyle.Fill;
-            UserControl_Login.Instance.BringToFront();
-        }
-
         private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
-            mainPanel.Controls.Clear();
-            if (!mainPanel.Controls.Contains(UserControl_Login.Instance))
-                mainPanel.Controls.Add(UserControl_Login.Instance);
-            UserControl_Login.Instance.Dock = DockStyle.Fill;
-            UserControl_Login.Instance.BringToFront();
             
-            hyperlink_dangXuat.Visible = false;
-            label_usernameLogin.Text = null;
-            Form parentForm = this.FindForm();
-            ((MainForm)parentForm).tabPanel.Visible = false;
-            ((MainForm)parentForm).buttonPanel.Hide();
-            UserControl_Login.Instance.Show();
-            ((MainForm)parentForm).panelControl1.BringToFront();
-            ((MainForm)parentForm).panelControl1.Show();
         }
 
         private void btn_QLNV_Click(object sender, EventArgs e)
@@ -164,6 +142,37 @@ namespace Presentation_Tier
             UserControl_ListButton_BCDoanhThu.Instance.btn_themMoi.Enabled = true;
             UserControl_ListButton_BCDoanhThu.Instance.btn_Edit.Enabled = false;
             UserControl_ListButton_BCDoanhThu.Instance.btn_Xoa.Enabled = false;
+        }
+
+        private void btn_thayDoiQuyDinh_Click(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+
+            if (!((MainForm)parentForm).mainPanel.Controls.Contains(UserControl_ThayDoiQuyDinh.Instance))
+                ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_ThayDoiQuyDinh.Instance);
+            UserControl_ThayDoiQuyDinh.Instance.BringToFront();
+
+            if (!((MainForm)parentForm).buttonPanel.Controls.Contains(ThayDoiQuyDinh_ListButton.Instance))
+                ((MainForm)parentForm).buttonPanel.Controls.Add(ThayDoiQuyDinh_ListButton.Instance);
+            ThayDoiQuyDinh_ListButton.Instance.BringToFront();
+        }
+
+        private void hyperlink_dangXuat_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            if (!mainPanel.Controls.Contains(UserControl_Login.Instance))
+                mainPanel.Controls.Add(UserControl_Login.Instance);
+            UserControl_Login.Instance.Dock = DockStyle.Fill;
+            UserControl_Login.Instance.BringToFront();
+
+            hyperlink_dangXuat.Visible = false;
+            label_usernameLogin.Text = null;
+            Form parentForm = this.FindForm();
+            ((MainForm)parentForm).tabPanel.Visible = false;
+            ((MainForm)parentForm).buttonPanel.Hide();
+            UserControl_Login.Instance.Show();
+            ((MainForm)parentForm).panelControl1.BringToFront();
+            ((MainForm)parentForm).panelControl1.Show();
         }
     }
 }

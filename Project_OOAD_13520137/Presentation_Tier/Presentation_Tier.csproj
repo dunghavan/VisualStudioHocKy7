@@ -113,6 +113,18 @@
       <DependentUpon>UserControl_ListButton_BCTonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\MyGridLocalizer.cs" />
+    <Compile Include="Global\ThayDoiQuyDinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\ThayDoiQuyDinh.Designer.cs">
+      <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ThayDoiQuyDinh_ListButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\ThayDoiQuyDinh_ListButton.Designer.cs">
+      <DependentUpon>ThayDoiQuyDinh_ListButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +265,12 @@
     <EmbeddedResource Include="BCTonKho\UserControl_ListButton_BCTonKho.resx">
       <DependentUpon>UserControl_ListButton_BCTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Global\ThayDoiQuyDinh.resx">
+      <DependentUpon>ThayDoiQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ThayDoiQuyDinh_ListButton.resx">
+      <DependentUpon>ThayDoiQuyDinh_ListButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +370,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinhnen.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

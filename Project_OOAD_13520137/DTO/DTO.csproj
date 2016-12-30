@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TESTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ThamSo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

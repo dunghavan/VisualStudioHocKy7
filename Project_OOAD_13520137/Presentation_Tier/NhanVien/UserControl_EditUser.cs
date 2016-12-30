@@ -39,12 +39,18 @@ namespace Presentation_Tier
             try
             {
                 //Khởi tạo item cho comboBox mã loại nhân viên:
-                comboBox_maLoaiNV.Properties.Items.Add("QLK");
-                comboBox_maLoaiNV.Properties.Items.Add("BH");
-                comboBox_maLoaiNV.Properties.Items.Add("NH");
-                comboBox_maLoaiNV.Properties.Items.Add("KT");
-                comboBox_maLoaiNV.Properties.Items.Add("AD");
-                comboBox_maLoaiNV.Properties.Items.Add("FULL");
+                if(!comboBox_maLoaiNV.Properties.Items.Contains("QLK"))
+                    comboBox_maLoaiNV.Properties.Items.Add("QLK");
+                if (!comboBox_maLoaiNV.Properties.Items.Contains("BH"))
+                    comboBox_maLoaiNV.Properties.Items.Add("BH");
+                if (!comboBox_maLoaiNV.Properties.Items.Contains("NH"))
+                    comboBox_maLoaiNV.Properties.Items.Add("NH");
+                if (!comboBox_maLoaiNV.Properties.Items.Contains("KT"))
+                    comboBox_maLoaiNV.Properties.Items.Add("KT");
+                if (!comboBox_maLoaiNV.Properties.Items.Contains("AD"))
+                    comboBox_maLoaiNV.Properties.Items.Add("AD");
+                if (!comboBox_maLoaiNV.Properties.Items.Contains("FULL"))
+                    comboBox_maLoaiNV.Properties.Items.Add("FULL");
 
                 //Khởi tạo item cho conboBox năm sinh:
                 for (int i = 1900; i < 2017; i ++)
@@ -94,24 +100,31 @@ namespace Presentation_Tier
         {
             if (checkUpdateInformation())
             {
-                //XtraMessageBox.Show("Các thông tin đã hợp lệ");
-                NhanVien tempNhanVien = new NhanVien(tempMaNV, tempHoTen, Convert.ToInt32(tempNamSinh), tempGioiTinh,
-                                                    tempSDT, tempEmail, tempUsername, temPassword, tempMaLoaiNV, tempIsActive);
-                bool updated = false;
-                updated = UserControl_ListUser.objNVBus.updateNhanVien(tempNhanVien);
-                if (updated)
+                try
                 {
-                    //XtraMessageBox.Show("Cập nhật thành công!");
-                    UserControl_ListUser.Instance.loadDanhSachNV();
-                    UserControl_ListUser.Instance.BringToFront();
-                    UserControl_ListUser.Instance.label_notification.Text = "Cập nhật thành công!";
-                    //Enable/disable các btn:
-                    UserControl_ListButton_User.Instance.btn_themMoi.Enabled = true;
-                    UserControl_ListButton_User.Instance.btn_Edit.Enabled = false;
-                    UserControl_ListButton_User.Instance.btn_Xoa.Enabled = false;
+                    //XtraMessageBox.Show("Các thông tin đã hợp lệ");
+                    NhanVien tempNhanVien = new NhanVien(tempMaNV, tempHoTen, Convert.ToInt32(tempNamSinh), tempGioiTinh,
+                                                        tempSDT, tempEmail, tempUsername, temPassword, tempMaLoaiNV, tempIsActive);
+                    bool updated = false;
+                    updated = UserControl_ListUser.objNVBus.updateNhanVien(tempNhanVien);
+                    if (updated)
+                    {
+                        //XtraMessageBox.Show("Cập nhật thành công!");
+                        UserControl_ListUser.Instance.loadDanhSachNV();
+                        UserControl_ListUser.Instance.BringToFront();
+                        UserControl_ListUser.Instance.label_notification.Text = "Cập nhật thành công!";
+                        //Enable/disable các btn:
+                        UserControl_ListButton_User.Instance.btn_themMoi.Enabled = true;
+                        UserControl_ListButton_User.Instance.btn_Edit.Enabled = false;
+                        UserControl_ListButton_User.Instance.btn_Xoa.Enabled = false;
+                    }
+                    else
+                        XtraMessageBox.Show("Cập nhật không thành công!");
                 }
-                else
-                    XtraMessageBox.Show("Cập nhật không thành công!");
+                catch(Exception ex)
+                {
+                    XtraMessageBox.Show("Lỗi lưu thông tin: " + ex.Message);
+                }
             }
             else
             {
