@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B022DE99-D478-4DEE-9B54-C44A047FC31B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.BonusSkins.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 15.2\Components\Bin\Framework\DevExpress.XtraEditors.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CTPGH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTPGH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ctpgh1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctpgh1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DDH_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DDH_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DonDatHang\UC_AddDDH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DonDatHang\UC_AddDDH.Designer.cs">
+      <DependentUpon>UC_AddDDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonDatHang\UC_EditDDH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DonDatHang\UC_EditDDH.Designer.cs">
+      <DependentUpon>UC_EditDDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonDatHang\UC_ListButton_DDH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DonDatHang\UC_ListButton_DDH.Designer.cs">
+      <DependentUpon>UC_ListButton_DDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonDatHang\UC_ListDonDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DonDatHang\UC_ListDonDatHang.Designer.cs">
+      <DependentUpon>UC_ListDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\UserControl_MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\UserControl_MainMenu.Designer.cs">
+      <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\UC_AddHoaDonLe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\UC_AddHoaDonLe.Designer.cs">
+      <DependentUpon>UC_AddHoaDonLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\UC_HoaDonSi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\UC_HoaDonSi.Designer.cs">
+      <DependentUpon>UC_HoaDonSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\UC_ListButton_HD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\UC_ListButton_HD.Designer.cs">
+      <DependentUpon>UC_ListButton_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\UC_ListHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\UC_ListHoaDon.Designer.cs">
+      <DependentUpon>UC_ListHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\UC_SuaHoaDonLe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoaDon\UC_SuaHoaDonLe.Designer.cs">
+      <DependentUpon>UC_SuaHoaDonLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_AddKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_AddKhachHang.Designer.cs">
+      <DependentUpon>UserControl_AddKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_EditKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_EditKhachHang.Designer.cs">
+      <DependentUpon>UserControl_EditKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_ListButton_KH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_ListButton_KH.Designer.cs">
+      <DependentUpon>UserControl_ListButton_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_QLKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang\UserControl_QLKH.Designer.cs">
+      <DependentUpon>UserControl_QLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PGH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PGH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_AddPGH2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_AddPGH2.Designer.cs">
+      <DependentUpon>UC_AddPGH2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_EditPGH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_EditPGH.Designer.cs">
+      <DependentUpon>UC_EditPGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_ListButton_PGH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_ListButton_PGH.Designer.cs">
+      <DependentUpon>UC_ListButton_PGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_ListPGH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PhieuGiaoHang\UC_ListPGH.Designer.cs">
+      <DependentUpon>UC_ListPGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="CTDDH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CTDDH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SanPhamDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanPhamDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DonDatHang\UC_AddDDH.resx">
+      <DependentUpon>UC_AddDDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonDatHang\UC_EditDDH.resx">
+      <DependentUpon>UC_EditDDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonDatHang\UC_ListButton_DDH.resx">
+      <DependentUpon>UC_ListButton_DDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonDatHang\UC_ListDonDatHang.resx">
+      <DependentUpon>UC_ListDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\UserControl_MainMenu.resx">
+      <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\UC_AddHoaDonLe.resx">
+      <DependentUpon>UC_AddHoaDonLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\UC_HoaDonSi.resx">
+      <DependentUpon>UC_HoaDonSi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\UC_ListButton_HD.resx">
+      <DependentUpon>UC_ListButton_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\UC_ListHoaDon.resx">
+      <DependentUpon>UC_ListHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\UC_SuaHoaDonLe.resx">
+      <DependentUpon>UC_SuaHoaDonLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\UserControl_AddKhachHang.resx">
+      <DependentUpon>UserControl_AddKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\UserControl_EditKhachHang.resx">
+      <DependentUpon>UserControl_EditKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\UserControl_ListButton_KH.resx">
+      <DependentUpon>UserControl_ListButton_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\UserControl_QLKH.resx">
+      <DependentUpon>UserControl_QLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuGiaoHang\UC_AddPGH2.resx">
+      <DependentUpon>UC_AddPGH2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuGiaoHang\UC_EditPGH.resx">
+      <DependentUpon>UC_EditPGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuGiaoHang\UC_ListButton_PGH.resx">
+      <DependentUpon>UC_ListButton_PGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuGiaoHang\UC_ListPGH.resx">
+      <DependentUpon>UC_ListPGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{a2d12708-2570-401b-b752-6de8bce1bdca}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{b5ab0c05-0561-4bc9-8cd6-04396edc8f6c}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{53120896-4991-4487-8bac-6f0c07436629}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="CTPGH.xsc">
+      <DependentUpon>CTPGH.xsd</DependentUpon>
+    </None>
+    <None Include="CTPGH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTPGH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CTPGH.xss">
+      <DependentUpon>CTPGH.xsd</DependentUpon>
+    </None>
+    <None Include="ctpgh1.xsc">
+      <DependentUpon>ctpgh1.xsd</DependentUpon>
+    </None>
+    <None Include="ctpgh1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ctpgh1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ctpgh1.xss">
+      <DependentUpon>ctpgh1.xsd</DependentUpon>
+    </None>
+    <None Include="DDH_DataSet.xsc">
+      <DependentUpon>DDH_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DDH_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DDH_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DDH_DataSet.xss">
+      <DependentUpon>DDH_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PGH.xsc">
+      <DependentUpon>PGH.xsd</DependentUpon>
+    </None>
+    <None Include="PGH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PGH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PGH.xss">
+      <DependentUpon>PGH.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CTDDH.xsc">
+      <DependentUpon>CTDDH.xsd</DependentUpon>
+    </None>
+    <None Include="CTDDH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CTDDH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CTDDH.xss">
+      <DependentUpon>CTDDH.xsd</DependentUpon>
+    </None>
+    <None Include="SanPhamDataSet.xsc">
+      <DependentUpon>SanPhamDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SanPhamDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SanPhamDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SanPhamDataSet.xss">
+      <DependentUpon>SanPhamDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

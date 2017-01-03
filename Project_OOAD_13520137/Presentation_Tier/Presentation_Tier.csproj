@@ -8,8 +8,8 @@
     <ProjectGuid>{6EFA715A-0ED5-43A8-AAF3-1F33C081BA54}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Presentation_Tier</RootNamespace>
-    <AssemblyName>Presentation_Tier</AssemblyName>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -358,6 +358,10 @@
       <Project>{3210196b-f070-40c3-8e11-4e3270c55994}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GUI\GUI.csproj">
+      <Project>{b022de99-d478-4dee-9b54-c44a047fc31b}</Project>
+      <Name>GUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg-body.jpg" />
@@ -374,6 +378,7 @@
   <ItemGroup>
     <None Include="Resources\hinhnen.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

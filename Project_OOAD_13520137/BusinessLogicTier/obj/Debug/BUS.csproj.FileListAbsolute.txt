@@ -1,9 +1,12 @@
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\App.config
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\DAO_Login.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\DTO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\log4net.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\DAO_Login.pdb
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\DTO_Login.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\bin\Debug\log4net.xml
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

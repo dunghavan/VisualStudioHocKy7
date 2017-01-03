@@ -1,7 +1,11 @@
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\App.config
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\DAO_Login.dll.config
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\DAO_Login.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\DAO_Login.pdb
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\DTO_Login.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\log4net.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\DTO_Login.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\bin\Debug\log4net.xml
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\obj\Debug\DAO_Login.dll
 C:\Users\Dung\Documents\Visual Studio 2013\Projects\Project_OOAD_13520137\DAO\obj\Debug\DAO_Login.pdb
