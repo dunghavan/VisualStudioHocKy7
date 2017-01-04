@@ -19,6 +19,9 @@ namespace GUI
         public UC_EditDDH()
         {
             InitializeComponent();
+            LoadData();
+            
+            
         }
         private static UC_EditDDH _instance;
         public static UC_EditDDH Instance
@@ -41,33 +44,32 @@ namespace GUI
         NhanVienBUS nvBUS = new NhanVienBUS();
         KhachHangBUS khBUS = new KhachHangBUS();
         string maEdit = UC_ListDonDatHang.Instance.maDDH_edit;
+        
         //string maEdit = "002";
             
-        private void UC_EditDDH_Load(object sender, EventArgs e)
+        
+        public void LoadData()
         {
+            gc_CTDDH.DataSource = ddhBUS.Load_DSCT_TheoMaDDH(maEdit);
+            gc_DMSP.DataSource = spBUS.getAllSanPham();
+            txt_maNV.Text = 
+            txt_maDDH.Text = maEdit;
            
-           gc_CTDDH.DataSource = ddhBUS.Load_DSCT_TheoMaDDH(maEdit);
-           gc_DMSP.DataSource = spBUS.getAllSanPham();
-           cbb_NV.DataSource = nvBUS.getAllNhanVien();
-           txt_maDDH.Text = maEdit;
-           cbb_NV.DisplayMember = "HoTen";
-           cbb_NV.ValueMember = "MaNV";
-           cbb_KH.DataSource = khBUS.Load_DSKhachHang();
-           cbb_KH.DisplayMember = "HoTen";
-           cbb_KH.ValueMember = "MaKH";
-           cbb_KH.Enabled = true;
-           cbb_NV.Enabled = true;
-           dtp_NgayGiao.Enabled = true;
-           for (int i = 0; i < int.Parse(gv_CTDDH.RowCount.ToString()); i++)
-           {
-               
+            cbb_KH.DataSource = khBUS.Load_DSKhachHang();
+            cbb_KH.DisplayMember = "HoTen";
+            cbb_KH.ValueMember = "MaKH";
+            cbb_KH.Enabled = true;
+            //cbb_NV.Enabled = true;
+            dtp_NgayGiao.Enabled = true;
+            for (int i = 0; i < int.Parse(gv_CTDDH.RowCount.ToString()); i++)
+            {
 
-               tongtien += int.Parse(gv_CTDDH.GetRowCellValue(i, "ThanhTien").ToString());
-           }
 
-           txtTongthanhtoan.Text = tongtien.ToString();
+                tongtien += int.Parse(gv_CTDDH.GetRowCellValue(i, "ThanhTien").ToString());
+            }
+
+            txtTongthanhtoan.Text = tongtien.ToString();
         }
-
         private void txt_SL_ValueChanged(object sender, EventArgs e)
         {
             
@@ -168,7 +170,7 @@ namespace GUI
         {
             ddhBUS.Update_DonDatHang(txt_maDDH.Text,
                                       dtpNgayLap_PDH.Value,
-                                      cbb_NV.SelectedValue.ToString(),
+                                      txt_maNV.Text,
                                       cbb_KH.SelectedValue.ToString(),
                                       int.Parse(txtTongthanhtoan.Text),
                                       dtp_NgayGiao.Value,
@@ -176,6 +178,7 @@ namespace GUI
             Form parentForm = this.FindForm();
             ((MainForm)parentForm).mainPanel.Controls.Add(UC_ListDonDatHang.Instance);
             UC_ListDonDatHang.Instance.BringToFront();
+            UC_ListDonDatHang.Instance.LoadDonDatHang();
         }
 
         private void gv_DMSP_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -217,7 +220,12 @@ namespace GUI
             btn_CapNhat.Enabled = true;
             btnXoaSP.Enabled = true;
         }
-        
 
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+            ((MainForm)parentForm).mainPanel.Controls.Add(UC_ListDonDatHang.Instance);
+            UC_ListDonDatHang.Instance.BringToFront();
+        }
     }
 }

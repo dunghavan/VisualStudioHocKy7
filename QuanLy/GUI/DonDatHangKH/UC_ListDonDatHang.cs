@@ -18,6 +18,7 @@ namespace GUI
         {
             InitializeComponent();
             GridLocalizer.Active = new MyGridLocalizer();
+            
         }
         private static UC_ListDonDatHang _instance;
         public static UC_ListDonDatHang Instance
@@ -32,14 +33,10 @@ namespace GUI
         public static DonDatHangBUS ddhBUS = new DonDatHangBUS();
        
         public string maDDH_edit;
-        private void loadDSDonDatHang()
+        public string TenNV_edit;
+        public void LoadDonDatHang()
         {
-            //tableDDH = ddhBUS.Load_DSDonDatHang();
-            //DataTable _tempTableDDH = new DataTable();
-            //int stt = 0;
-            //// khai bao ten cot
-
-            //string [] columnName ={"STT", "Mã đơn đặt hàng", "Tên nhân viên", "Tên khách hàng", "Tổng Tiền", "Ngày" }
+           
             gridControl_DDH.DataSource = ddhBUS.Load_DSDonDatHang();
             UC_ListButton_DDH.Instance.btn_them.Enabled = true;
             UC_ListButton_DDH.Instance.btn_Sua.Enabled = true;
@@ -53,7 +50,7 @@ namespace GUI
        
         private void gridControl_DDH_Load(object sender, EventArgs e)
         {
-            loadDSDonDatHang();
+            LoadDonDatHang();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -73,7 +70,9 @@ namespace GUI
 
             //UC_EditDDH.Instance.loadDataFromGridView();
         }
+        public static int[] selectedRowsArray = null;
 
+        public static DataRow selectedRow = null;
         private void gv_DSDDH_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             //var row = gv_CTDDH.GetDataRow(e.RowHandle);
@@ -85,6 +84,22 @@ namespace GUI
 
             var row = gv_DSDDH.GetDataRow(e.RowHandle);
             maDDH_edit = row["MaDDH"].ToString();
+            TenNV_edit = row["TenNV"].ToString();
+            //Lấy chỉ số của các row đã chọn gán vào mảng []selectedRows:
+            //selectedRowsArray = gv_DSDDH.GetSelectedRows();
+            //gán row đã chọn vào selectedRow:
+            //selectedRow = gv_DSDDH.GetDataRow(selectedRowsArray[0]);
+            UC_ListButton_DDH.Instance.btn_them.Enabled = false;
+            UC_ListButton_DDH.Instance.btn_Sua.Enabled = true;
+            UC_ListButton_DDH.Instance.btn_Xoa.Enabled = true;
+
+        }
+
+        private void UC_ListDonDatHang_Load(object sender, EventArgs e)
+        {
+            UC_ListButton_DDH.Instance.btn_them.Enabled = true;
+            UC_ListButton_DDH.Instance.btn_Sua.Enabled = true;
+            UC_ListButton_DDH.Instance.btn_Xoa.Enabled = true;
         }
     }
 }

@@ -34,13 +34,11 @@
             this.gv_DSDDH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaDDH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NgayLap = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgayGiaoDuKien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTongTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btn_Them = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_Sua = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DDH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.donDatHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DSDDH)).BeginInit();
@@ -49,12 +47,10 @@
             // gridControl_DDH
             // 
             this.gridControl_DDH.DataSource = this.donDatHangBindingSource;
-            this.gridControl_DDH.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gridControl_DDH.Location = new System.Drawing.Point(45, 90);
+            this.gridControl_DDH.Location = new System.Drawing.Point(68, 138);
             this.gridControl_DDH.MainView = this.gv_DSDDH;
-            this.gridControl_DDH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl_DDH.Name = "gridControl_DDH";
-            this.gridControl_DDH.Size = new System.Drawing.Size(741, 298);
+            this.gridControl_DDH.Size = new System.Drawing.Size(1112, 458);
             this.gridControl_DDH.TabIndex = 0;
             this.gridControl_DDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_DSDDH});
@@ -69,15 +65,18 @@
             this.gv_DSDDH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaDDH,
             this.NgayLap,
-            this.colMaKH,
             this.colMaNV,
+            this.colMaKH,
             this.colNgayGiaoDuKien,
             this.colTongTien});
             this.gv_DSDDH.GridControl = this.gridControl_DDH;
             this.gv_DSDDH.Name = "gv_DSDDH";
+            this.gv_DSDDH.OptionsBehavior.Editable = false;
             this.gv_DSDDH.OptionsBehavior.ReadOnly = true;
             this.gv_DSDDH.OptionsFind.AlwaysVisible = true;
             this.gv_DSDDH.OptionsFind.FindNullPrompt = "Nhập thông tin tìm kiếm";
+            this.gv_DSDDH.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gv_DSDDH.OptionsView.ShowGroupPanel = false;
             this.gv_DSDDH.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gv_DSDDH_RowClick);
             // 
             // MaDDH
@@ -99,6 +98,15 @@
             this.NgayLap.VisibleIndex = 3;
             this.NgayLap.Width = 159;
             // 
+            // colMaNV
+            // 
+            this.colMaNV.Caption = "Tên Nhân Viên";
+            this.colMaNV.FieldName = "TenNV";
+            this.colMaNV.Name = "colMaNV";
+            this.colMaNV.Visible = true;
+            this.colMaNV.VisibleIndex = 1;
+            this.colMaNV.Width = 191;
+            // 
             // colMaKH
             // 
             this.colMaKH.Caption = "Tên khách hàng";
@@ -108,17 +116,9 @@
             this.colMaKH.VisibleIndex = 2;
             this.colMaKH.Width = 191;
             // 
-            // colMaNV
-            // 
-            this.colMaNV.Caption = "Tên Nhân Viên";
-            this.colMaNV.FieldName = "HoTen";
-            this.colMaNV.Name = "colMaNV";
-            this.colMaNV.Visible = true;
-            this.colMaNV.VisibleIndex = 1;
-            this.colMaNV.Width = 191;
-            // 
             // colNgayGiaoDuKien
             // 
+            this.colNgayGiaoDuKien.Caption = "Ngày giao";
             this.colNgayGiaoDuKien.FieldName = "NgayGiaoDuKien";
             this.colNgayGiaoDuKien.Name = "colNgayGiaoDuKien";
             this.colNgayGiaoDuKien.Visible = true;
@@ -127,6 +127,7 @@
             // 
             // colTongTien
             // 
+            this.colTongTien.Caption = "Tổng tiền";
             this.colTongTien.FieldName = "TongTien";
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.Visible = true;
@@ -140,44 +141,21 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(277, 21);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Location = new System.Drawing.Point(416, 32);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(289, 55);
+            this.labelControl1.Size = new System.Drawing.Size(434, 85);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "DANH SÁCH ĐƠN ĐẶT HÀNG";
             // 
-            // btn_Them
-            // 
-            this.btn_Them.Location = new System.Drawing.Point(594, 401);
-            this.btn_Them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(80, 28);
-            this.btn_Them.TabIndex = 3;
-            this.btn_Them.Text = "Thêm mới";
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Location = new System.Drawing.Point(699, 401);
-            this.btn_Sua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(80, 28);
-            this.btn_Sua.TabIndex = 3;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
-            // 
             // UC_ListDonDatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_Sua);
-            this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl_DDH);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_ListDonDatHang";
-            this.Size = new System.Drawing.Size(1361, 455);
+            this.Size = new System.Drawing.Size(2042, 700);
+            this.Load += new System.EventHandler(this.UC_ListDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DDH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donDatHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DSDDH)).EndInit();
@@ -194,8 +172,6 @@
 
 
         public DevExpress.XtraGrid.GridControl gridControl_DDH;
-        private DevExpress.XtraEditors.SimpleButton btn_Them;
-        private DevExpress.XtraEditors.SimpleButton btn_Sua;
         public DevExpress.XtraGrid.Views.Grid.GridView gv_DSDDH;
         private DevExpress.XtraGrid.Columns.GridColumn colMaKH;
         private DevExpress.XtraGrid.Columns.GridColumn colMaNV;

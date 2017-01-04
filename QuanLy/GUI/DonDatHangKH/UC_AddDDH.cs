@@ -38,7 +38,8 @@ namespace GUI
                 groupControl_SanPham.Visible = false;
                 gc_DMSP.Visible = false;
                 gc_CTDDH.Visible = false;
-                
+                label16.Visible = false;
+                label17.Visible = false;
                 txtTongthanhtoan.Visible = false;
                 btn_HoanTat.Visible = false;
 
@@ -58,6 +59,8 @@ namespace GUI
                 txtTongthanhtoan.Visible = true;
                 lb_thongbao.Visible = true;
                 btn_HoanTat.Visible = true;
+                label16.Visible = true;
+                label17.Visible =true;
 
             }
         }
@@ -82,6 +85,7 @@ namespace GUI
         DonDatHangBUS ddhBUS = new DonDatHangBUS();
         NhanVienBUS nvBUS = new NhanVienBUS();
         KhachHangBUS khBUS = new KhachHangBUS();
+        string maNV;
         // khởi tạo dữ liệu
         public void LoadData()
         {
@@ -92,9 +96,8 @@ namespace GUI
             gc_DMSP.DataSource = spBUS.getAllSanPham();
             //gc_CTDDH.DataSource = ddhBUS.Load_DSCT_TheoMaDDH(txt_maDDH.Text);
             txt_SL.Enabled = false;
-            cbb_NV2.DataSource = nvBUS.getAllNhanVien();
-            cbb_NV2.DisplayMember = "HoTen";
-            cbb_NV2.ValueMember = "MaNV";
+            txt_maNV2.Text = UserControl_Login.login_User.hoTen;
+            maNV = UserControl_Login.login_User.maNhanVien;
             cbb_KH2.DataSource = khBUS.Load_DSKhachHang();
             cbb_KH2.DisplayMember = "HoTen";
             cbb_KH2.ValueMember = "MaKH";
@@ -202,14 +205,14 @@ namespace GUI
                     // kiểm tra công nợ
                     if (ddhBUS.Insert_DonDatHang(txt_maDDH2.Text
                         , dtpNgayLap_PDH.Value,
-                        cbb_NV2.SelectedValue.ToString(),
+                        maNV,
                         cbb_KH2.SelectedValue.ToString(),
                         0, dtp_NgayGiao2.Value, "",
                         no))
                     {
                         txt_maDDH.Text = txt_maDDH2.Text;
                         cbb_KH.Text = cbb_KH2.Text;
-                        cbb_NV.Text = cbb_NV2.Text;
+                        txt_maNV.Text = txt_maNV2.Text;
                         dtp_NgayGiao.Text = dtp_NgayGiao2.Text;
                         ToggleUI(false);
                     }
@@ -298,16 +301,11 @@ namespace GUI
         //update thông tin đơn đặt hàng và trở về màn hình trước
         private void btn_HoanTat_Click(object sender, EventArgs e)
         {
-            ddhBUS.Update_DonDatHang(txt_maDDH.Text,
-                                      dtpNgayLap_PDH.Value,
-                                      cbb_NV.SelectedValue.ToString(),
-                                      cbb_KH.SelectedValue.ToString(),
-                                      int.Parse(txtTongthanhtoan.Text),
-                                      dtp_NgayGiao.Value,
-                                      "");
+            ddhBUS.Update_TongTienDDH(txt_maDDH.Text, int.Parse(txtTongthanhtoan.Text));
             Form parentForm = this.FindForm();
             ((MainForm)parentForm).mainPanel.Controls.Add(UC_ListDonDatHang.Instance);
             UC_ListDonDatHang.Instance.BringToFront();
+            UC_ListDonDatHang.Instance.LoadDonDatHang();
         }
 
         // hủy không tạo đơn đặt hàng
@@ -319,6 +317,11 @@ namespace GUI
             UC_ListDonDatHang.Instance.BringToFront();
         }
 
-
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Form parentForm = this.FindForm();
+            ((MainForm)parentForm).mainPanel.Controls.Add(UC_ListDonDatHang.Instance);
+            UC_ListDonDatHang.Instance.BringToFront();
+        }
     }
 }

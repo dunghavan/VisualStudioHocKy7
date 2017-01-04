@@ -54,7 +54,7 @@ namespace GUI
                 ((MainForm)parentForm).mainPanel.Controls.Add(UC_EditDDH.Instance);
             UC_EditDDH.Instance.BringToFront();
             btn_Xoa.Enabled = false;
-            btn_Sua.Enabled = false;
+            btn_them.Enabled = false;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
