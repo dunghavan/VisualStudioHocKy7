@@ -177,10 +177,17 @@ namespace GUI
             selectedRowsArray = gridView_DSNCC.GetSelectedRows();
             //gán row đã chọn vào selectedRow:
             selectedRow = gridView_DSNCC.GetDataRow(selectedRowsArray[0]);
-
+            
+            if (selectedRow["Trạng Thái"].ToString() == "Đang kích hoạt")
+                UserControl_ListButton_NCC.Instance.btn_Xoa.Enabled = true;
+            else
+                UserControl_ListButton_NCC.Instance.btn_Xoa.Enabled = false;
             UserControl_ListButton_NCC.Instance.btn_Edit.Enabled = true;
-            UserControl_ListButton_NCC.Instance.btn_Xoa.Enabled = true;
         }
 
+        private void gridControl_DSNCC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

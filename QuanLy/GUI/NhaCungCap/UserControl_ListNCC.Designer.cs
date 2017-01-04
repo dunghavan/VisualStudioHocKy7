@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridControl_DSNCC = new DevExpress.XtraGrid.GridControl();
             this.gridView_DSNCC = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label_notification = new System.Windows.Forms.Label();
@@ -40,9 +40,9 @@
             // gridControl_DSNCC
             // 
             this.gridControl_DSNCC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl_DSNCC.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridControl_DSNCC.Location = new System.Drawing.Point(22, 40);
             this.gridControl_DSNCC.MainView = this.gridView_DSNCC;
             this.gridControl_DSNCC.Name = "gridControl_DSNCC";
@@ -51,6 +51,7 @@
             this.gridControl_DSNCC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_DSNCC});
             this.gridControl_DSNCC.Load += new System.EventHandler(this.gridControl_DSNCC_Load);
+            this.gridControl_DSNCC.Click += new System.EventHandler(this.gridControl_DSNCC_Click);
             // 
             // gridView_DSNCC
             // 

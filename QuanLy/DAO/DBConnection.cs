@@ -15,7 +15,7 @@ namespace DAO
         protected SqlConnection conn;
         public DBConnection()
         {
-            string stringConnection = @"Data Source=DESKTOP-3AU5D4I\ThanhThuy;Initial Catalog=QuanLiCuaHangHoa;Integrated Security=True";
+            string stringConnection = @"Data Source=DESKTOP-RRRGOKE;Initial Catalog=QuanLiCuaHangHoa;Integrated Security=True";
             try
             {
                 conn = new SqlConnection(stringConnection);

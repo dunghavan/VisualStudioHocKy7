@@ -83,14 +83,10 @@ namespace GUI
                 tempdiaChi = textEdit_diaChi.Text;
                 tempsoDT = textEdit_soDT.Text;
                 tempghiChu = textEdit_ghiChu.Text;
-
-
-
-                //Tạo 1 regex chứa các ký tự cho phép:
-                Regex regexTen = new Regex(@"^[a-zA-Z\sáàảãạăắằẳẵặâấầẩẫậúùủũụưứừửữựéèẻẽẹêếềểễệíìỉĩịýỳỷỹỵóòỏõọôốồổỗộơớờởỡợđĐ]$");
-
                 
-
+                //Tạo 1 regex chứa các ký tự cho phép:
+                Regex regexTen = new Regex(@"^[a-zA-Z0-9\sáàảãạăắằẳẵặâấầẩẫậúùủũụưứừửữựéèẻẽẹêếềểễệíìỉĩịýỳỷỹỵóòỏõọôốồổỗộơớờởỡợđĐ]$");
+                
                 //KIỂM TRA TÊN NHÀ CUNG CẤP:
                 for (int i = 0; i < temptenNCC.Length; i++)
                 {
@@ -125,8 +121,7 @@ namespace GUI
                         return false;
                     }
                 }
-
-
+                
                 // Get isACtive:
                 tempIsActive = (radio_kichHoat.Checked == true) ? true : false;
 

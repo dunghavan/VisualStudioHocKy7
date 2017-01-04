@@ -71,8 +71,7 @@ namespace GUI
             textEdit_diaChi.Text = null;
             textEdit_ghiChu.Text = null;
             textEdit_soDT.Text = null;
-            radio_voHieuHoa.Select();
-
+            radio_kichHoat.Select();
         }
         private void btn_Luu_Click(object sender, EventArgs e)
         {
@@ -120,7 +119,7 @@ namespace GUI
 
 
                 //Tạo 1 regex chứa các ký tự cho phép:
-                Regex regexTen = new Regex(@"^[a-zA-Z\sáàảãạăắằẳẵặâấầẩẫậúùủũụưứừửữựéèẻẽẹêếềểễệíìỉĩịýỳỷỹỵóòỏõọôốồổỗộơớờởỡợđĐ]$");
+                Regex regexTen = new Regex(@"^[a-zA-Z0-9\sáàảãạăắằẳẵặâấầẩẫậúùủũụưứừửữựéèẻẽẹêếềểễệíìỉĩịýỳỷỹỵóòỏõọôốồổỗộơớờởỡợđĐ]$");
 
                 //KIỂM TRA MÃ NHÀ CUNG CẤP:
                 foreach (DataRow dr in UserControl_ListNCC.tableNCC.Rows)
