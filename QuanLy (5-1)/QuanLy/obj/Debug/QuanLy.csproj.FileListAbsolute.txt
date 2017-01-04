@@ -1,0 +1,5 @@
+F:\Năm 4\OOAD\thực hành\QuanLy\QuanLy\bin\Debug\QuanLy.dll
+F:\Năm 4\OOAD\thực hành\QuanLy\QuanLy\bin\Debug\QuanLy.pdb
+F:\Năm 4\OOAD\thực hành\QuanLy\QuanLy\obj\Debug\QuanLy.csprojResolveAssemblyReference.cache
+F:\Năm 4\OOAD\thực hành\QuanLy\QuanLy\obj\Debug\QuanLy.dll
+F:\Năm 4\OOAD\thực hành\QuanLy\QuanLy\obj\Debug\QuanLy.pdb
