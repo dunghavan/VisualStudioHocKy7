@@ -34,8 +34,8 @@
             this.gv_DSHD = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaHD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NgayLap = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTongTien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_HD)).BeginInit();
@@ -46,10 +46,12 @@
             // gridControl_HD
             // 
             this.gridControl_HD.DataSource = this.donDatHangBindingSource;
-            this.gridControl_HD.Location = new System.Drawing.Point(105, 129);
+            this.gridControl_HD.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl_HD.Location = new System.Drawing.Point(22, 40);
             this.gridControl_HD.MainView = this.gv_DSHD;
+            this.gridControl_HD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl_HD.Name = "gridControl_HD";
-            this.gridControl_HD.Size = new System.Drawing.Size(1112, 458);
+            this.gridControl_HD.Size = new System.Drawing.Size(1326, 295);
             this.gridControl_HD.TabIndex = 4;
             this.gridControl_HD.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_DSHD});
@@ -61,6 +63,10 @@
             // 
             // gv_DSHD
             // 
+            this.gv_DSHD.Appearance.HeaderPanel.FontSizeDelta = 6;
+            this.gv_DSHD.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gv_DSHD.Appearance.Row.FontSizeDelta = 6;
+            this.gv_DSHD.Appearance.Row.Options.UseFont = true;
             this.gv_DSHD.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaHD,
             this.NgayLap,
@@ -95,15 +101,6 @@
             this.NgayLap.VisibleIndex = 3;
             this.NgayLap.Width = 159;
             // 
-            // colMaKH
-            // 
-            this.colMaKH.Caption = "Tên khách hàng";
-            this.colMaKH.FieldName = "HoTen";
-            this.colMaKH.Name = "colMaKH";
-            this.colMaKH.Visible = true;
-            this.colMaKH.VisibleIndex = 2;
-            this.colMaKH.Width = 191;
-            // 
             // colMaNV
             // 
             this.colMaNV.Caption = "Tên Nhân Viên";
@@ -113,8 +110,18 @@
             this.colMaNV.VisibleIndex = 1;
             this.colMaNV.Width = 191;
             // 
+            // colMaKH
+            // 
+            this.colMaKH.Caption = "Tên khách hàng";
+            this.colMaKH.FieldName = "HoTen";
+            this.colMaKH.Name = "colMaKH";
+            this.colMaKH.Visible = true;
+            this.colMaKH.VisibleIndex = 2;
+            this.colMaKH.Width = 191;
+            // 
             // colTongTien
             // 
+            this.colTongTien.Caption = "Tổng tiền";
             this.colTongTien.FieldName = "TongTien";
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.Visible = true;
@@ -124,24 +131,26 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(453, 25);
+            this.labelControl1.Location = new System.Drawing.Point(273, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(434, 85);
+            this.labelControl1.Size = new System.Drawing.Size(289, 36);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "DANH SÁCH HÓA ĐƠN";
             // 
             // UC_ListHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl_HD);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_ListHoaDon";
-            this.Size = new System.Drawing.Size(2042, 700);
+            this.Size = new System.Drawing.Size(1361, 455);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_HD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donDatHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DSHD)).EndInit();

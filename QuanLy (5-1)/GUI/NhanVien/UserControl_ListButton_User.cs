@@ -66,23 +66,23 @@ namespace GUI
             try
             {
                 maNVDelete = UserControl_ListUser.selectedRow["Mã NV"].ToString();
-                DialogResult dialogResult = XtraMessageBox.Show("Bạn có muốn xóa nhân viên?", "Xác nhận!", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = XtraMessageBox.Show("Bạn có muốn vô hiệu hóa tài khoản nhân viên?", "Xác nhận!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     deleted = UserControl_ListUser.objNVBus.deleteNhanVien(maNVDelete);
                     if (deleted)
                     {
                         UserControl_ListUser.Instance.loadDanhSachNV();
-                        UserControl_ListUser.Instance.label_notification.Text = "Đã xóa nhân viên!";
+                        UserControl_ListUser.Instance.label_notification.Text = "Đã vô hiệu hóa nhân viên!";
                     }
                     else
-                        XtraMessageBox.Show("Xóa không thành công");
+                        XtraMessageBox.Show("Vô hiệu hóa không thành công");
                 }
 
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show("Lỗi tại sự kiện button Xóa: \n" + ex.Message);
+                XtraMessageBox.Show("Lỗi tại sự kiện button Vô hiệu hóa: \n" + ex.Message);
             }
         }
     }

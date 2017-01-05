@@ -47,10 +47,12 @@
             // gc_PGH
             // 
             this.gc_PGH.DataSource = this.donDatHangBindingSource;
-            this.gc_PGH.Location = new System.Drawing.Point(105, 129);
+            this.gc_PGH.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gc_PGH.Location = new System.Drawing.Point(22, 40);
             this.gc_PGH.MainView = this.gv_DSPGH;
+            this.gc_PGH.Margin = new System.Windows.Forms.Padding(2);
             this.gc_PGH.Name = "gc_PGH";
-            this.gc_PGH.Size = new System.Drawing.Size(1112, 458);
+            this.gc_PGH.Size = new System.Drawing.Size(1326, 295);
             this.gc_PGH.TabIndex = 4;
             this.gc_PGH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_DSPGH});
@@ -62,6 +64,10 @@
             // 
             // gv_DSPGH
             // 
+            this.gv_DSPGH.Appearance.HeaderPanel.FontSizeDelta = 6;
+            this.gv_DSPGH.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gv_DSPGH.Appearance.Row.FontSizeDelta = 6;
+            this.gv_DSPGH.Appearance.Row.Options.UseFont = true;
             this.gv_DSPGH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaPGH,
             this.MaDDH,
@@ -80,7 +86,7 @@
             // 
             // MaPGH
             // 
-            this.MaPGH.Caption = "Mã PGH";
+            this.MaPGH.Caption = "Mã phiếu giao hàng";
             this.MaPGH.FieldName = "MaPGH";
             this.MaPGH.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
             this.MaPGH.Name = "MaPGH";
@@ -90,7 +96,7 @@
             // 
             // MaDDH
             // 
-            this.MaDDH.Caption = "Mã DDH";
+            this.MaDDH.Caption = "Mã đơn đặt hàng";
             this.MaDDH.FieldName = "MaDDH";
             this.MaDDH.Name = "MaDDH";
             this.MaDDH.Visible = true;
@@ -136,24 +142,26 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(453, 25);
+            this.labelControl1.Location = new System.Drawing.Point(298, -10);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(494, 85);
+            this.labelControl1.Size = new System.Drawing.Size(329, 55);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "DANH SÁCH PHIẾU GIAO HÀNG";
             // 
             // UC_ListPGH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gc_PGH);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_ListPGH";
-            this.Size = new System.Drawing.Size(2042, 700);
+            this.Size = new System.Drawing.Size(1361, 455);
             ((System.ComponentModel.ISupportInitialize)(this.gc_PGH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donDatHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DSPGH)).EndInit();

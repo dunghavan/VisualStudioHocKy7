@@ -188,6 +188,12 @@
     <Compile Include="Global\ThayDoiQuyDinh_ListButton.Designer.cs">
       <DependentUpon>ThayDoiQuyDinh_ListButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global\UserControl_ListButton_Empty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\UserControl_ListButton_Empty.Designer.cs">
+      <DependentUpon>UserControl_ListButton_Empty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\UserControl_Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -199,6 +205,12 @@
     </Compile>
     <Compile Include="Global\UserControl_MainMenu.Designer.cs">
       <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\UserControl_MainEmpty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\UserControl_MainEmpty.Designer.cs">
+      <DependentUpon>UserControl_MainEmpty.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDonBanHang\UC_AddHoaDonLe.cs">
       <SubType>UserControl</SubType>
@@ -487,11 +499,17 @@
     <EmbeddedResource Include="Global\ThayDoiQuyDinh_ListButton.resx">
       <DependentUpon>ThayDoiQuyDinh_ListButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Global\UserControl_ListButton_Empty.resx">
+      <DependentUpon>UserControl_ListButton_Empty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Global\UserControl_Login.resx">
       <DependentUpon>UserControl_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Global\UserControl_MainMenu.resx">
       <DependentUpon>UserControl_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\UserControl_MainEmpty.resx">
+      <DependentUpon>UserControl_MainEmpty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDonBanHang\UC_AddHoaDonLe.resx">
       <DependentUpon>UC_AddHoaDonLe.cs</DependentUpon>
@@ -703,6 +721,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

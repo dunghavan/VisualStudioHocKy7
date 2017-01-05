@@ -331,5 +331,6 @@ namespace GUI
             ((MainForm)parentForm).mainPanel.Controls.Add(UC_ListDonDatHang.Instance);
             UC_ListDonDatHang.Instance.BringToFront();
         }
+        
     }
 }

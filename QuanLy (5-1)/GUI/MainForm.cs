@@ -162,14 +162,19 @@ namespace GUI
                 mainPanel.Controls.Add(UserControl_Login.Instance);
             UserControl_Login.Instance.Dock = DockStyle.Fill;
             UserControl_Login.Instance.BringToFront();
+            //
+            if (!buttonPanel.Controls.Contains(UserControl_ListButton_Empty.Instance))
+                buttonPanel.Controls.Add(UserControl_ListButton_Empty.Instance);
+            UserControl_ListButton_Empty.Instance.BringToFront();
 
             hyperlink_dangXuat.Visible = false;
             label_usernameLogin.Text = null;
             Form parentForm = this.FindForm();
             ((MainForm)parentForm).tabPanel.Visible = false;
-            ((MainForm)parentForm).buttonPanel.Hide();
+            //((MainForm)parentForm).buttonPanel.Hide();
             UserControl_Login.Instance.Show();
-            //((MainForm)parentForm).panelControl1.BringToFront();
+            ((MainForm)parentForm).panel38.BringToFront();
+            ((MainForm)parentForm).panel38.Show();
             //((MainForm)parentForm).panelControl1.Show();
         }
 

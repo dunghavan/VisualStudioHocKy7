@@ -207,3 +207,46 @@ C:\Users\Dung\Desktop\NopBai OOAD\QuanLy\DAO\bin\Debug\ru\DevExpress.Pdf.v16.1.C
 C:\Users\Dung\Desktop\NopBai OOAD\QuanLy\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Dung\Desktop\NopBai OOAD\QuanLy\DAO\obj\Debug\DAO.dll
 C:\Users\Dung\Desktop\NopBai OOAD\QuanLy\DAO\obj\Debug\DAO.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DAO.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DAO.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DTO.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Utils.v16.1.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Data.v16.1.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Pdf.v16.1.Core.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DTO.pdb
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Utils.v16.1.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Data.v16.1.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\DevExpress.Pdf.v16.1.Core.xml
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\de\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\es\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ja\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\bin\Debug\ru\DevExpress.Pdf.v16.1.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\obj\Debug\DAO.dll
+C:\Users\Dung\Documents\Visual Studio 2013\Projects\QuanLy (5-1)\DAO\obj\Debug\DAO.pdb

@@ -35,14 +35,18 @@
             this.lb_username = new System.Windows.Forms.Label();
             this.textEdit_username = new DevExpress.XtraEditors.TextEdit();
             this.label_tittle = new System.Windows.Forms.Label();
+            this.pictureBoxlogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_password.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_username.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogin)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Controls.Add(this.btn_login);
             this.groupControl1.Controls.Add(this.lb_password);
             this.groupControl1.Controls.Add(this.textEdit_password);
@@ -113,17 +117,28 @@
             this.label_tittle.AutoSize = true;
             this.label_tittle.Font = new System.Drawing.Font("Tahoma", 12F);
             this.label_tittle.ForeColor = System.Drawing.Color.Orange;
-            this.label_tittle.Location = new System.Drawing.Point(605, 11);
+            this.label_tittle.Location = new System.Drawing.Point(585, 13);
             this.label_tittle.Name = "label_tittle";
             this.label_tittle.Size = new System.Drawing.Size(184, 19);
             this.label_tittle.TabIndex = 4;
             this.label_tittle.Text = "Đăng nhập vào hệ thống";
             // 
+            // pictureBoxlogin
+            // 
+            this.pictureBoxlogin.Image = global::GUI.Properties.Resources.icon;
+            this.pictureBoxlogin.Location = new System.Drawing.Point(499, 211);
+            this.pictureBoxlogin.Name = "pictureBoxlogin";
+            this.pictureBoxlogin.Size = new System.Drawing.Size(369, 120);
+            this.pictureBoxlogin.TabIndex = 5;
+            this.pictureBoxlogin.TabStop = false;
+            // 
             // UserControl_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Controls.Add(this.pictureBoxlogin);
             this.Controls.Add(this.label_tittle);
             this.Controls.Add(this.groupControl1);
             this.DoubleBuffered = true;
@@ -134,6 +149,7 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_password.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_username.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +164,6 @@
         private System.Windows.Forms.Label lb_username;
         private DevExpress.XtraEditors.TextEdit textEdit_username;
         private System.Windows.Forms.Label label_tittle;
+        public System.Windows.Forms.PictureBox pictureBoxlogin;
     }
 }

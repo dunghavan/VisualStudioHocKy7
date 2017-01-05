@@ -39,9 +39,9 @@
             this.btn_themMoi.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_themMoi.Appearance.Options.UseFont = true;
             this.btn_themMoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_themMoi.Image")));
-            this.btn_themMoi.Location = new System.Drawing.Point(985, 3);
+            this.btn_themMoi.Location = new System.Drawing.Point(964, 3);
             this.btn_themMoi.Name = "btn_themMoi";
-            this.btn_themMoi.Size = new System.Drawing.Size(108, 38);
+            this.btn_themMoi.Size = new System.Drawing.Size(119, 38);
             this.btn_themMoi.TabIndex = 11;
             this.btn_themMoi.Text = "Thêm mới";
             this.btn_themMoi.Click += new System.EventHandler(this.btn_themMoi_Click);
@@ -52,11 +52,11 @@
             this.btn_Xoa.Appearance.Options.UseFont = true;
             this.btn_Xoa.Enabled = false;
             this.btn_Xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.Image")));
-            this.btn_Xoa.Location = new System.Drawing.Point(1248, 3);
+            this.btn_Xoa.Location = new System.Drawing.Point(1232, 3);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(108, 38);
+            this.btn_Xoa.Size = new System.Drawing.Size(124, 38);
             this.btn_Xoa.TabIndex = 12;
-            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.Text = "Vô hiệu hóa";
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Edit
@@ -65,9 +65,9 @@
             this.btn_Edit.Appearance.Options.UseFont = true;
             this.btn_Edit.Enabled = false;
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
-            this.btn_Edit.Location = new System.Drawing.Point(1116, 3);
+            this.btn_Edit.Location = new System.Drawing.Point(1103, 3);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(108, 38);
+            this.btn_Edit.Size = new System.Drawing.Size(100, 38);
             this.btn_Edit.TabIndex = 13;
             this.btn_Edit.Text = "Sửa";
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);

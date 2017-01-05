@@ -43,31 +43,32 @@
             this.buttonPanel = new System.Windows.Forms.Panel();
             this.tabPanel = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabQLK = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.btn_BCTonKho = new DevExpress.XtraEditors.SimpleButton();
             this.tabBH = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.tabNH = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.tabKeToan = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.tabAdmin = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.tabHeThong = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.btn_BCTonKho = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QLKhachHang = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HDBanHangLe = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HDBanHangSi = new DevExpress.XtraEditors.SimpleButton();
             this.btn_phieuGiaoHang = new DevExpress.XtraEditors.SimpleButton();
             this.btn_donDatHang = new DevExpress.XtraEditors.SimpleButton();
-            this.tabNH = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.btn_QLNhaCC = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QLSanPham = new DevExpress.XtraEditors.SimpleButton();
             this.btn_HDNhapHang = new DevExpress.XtraEditors.SimpleButton();
             this.btn_donNhapHang = new DevExpress.XtraEditors.SimpleButton();
-            this.tabKeToan = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.btn_phieuThu = new DevExpress.XtraEditors.SimpleButton();
             this.btn_phieuChi = new DevExpress.XtraEditors.SimpleButton();
             this.btn_BCCongNoKH = new DevExpress.XtraEditors.SimpleButton();
             this.btn_BCDoanhThu = new DevExpress.XtraEditors.SimpleButton();
-            this.tabAdmin = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.btn_RestoreCSDL = new DevExpress.XtraEditors.SimpleButton();
             this.btn_BackUpCSDL = new DevExpress.XtraEditors.SimpleButton();
-            this.tabHeThong = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.btn_thayDoiQuyDinh = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QLNV = new DevExpress.XtraEditors.SimpleButton();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabPanel)).BeginInit();
             this.tabPanel.SuspendLayout();
             this.tabQLK.SuspendLayout();
@@ -76,7 +77,8 @@
             this.tabKeToan.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabHeThong.SuspendLayout();
-            this.mainPanel.SuspendLayout();
+            this.panel38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             this.SuspendLayout();
             // 
             // hyperlink_dangXuat
@@ -87,7 +89,7 @@
             this.hyperlink_dangXuat.Appearance.Options.UseBackColor = true;
             this.hyperlink_dangXuat.Appearance.Options.UseFont = true;
             this.hyperlink_dangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hyperlink_dangXuat.Location = new System.Drawing.Point(1183, 3);
+            this.hyperlink_dangXuat.Location = new System.Drawing.Point(1177, 1);
             this.hyperlink_dangXuat.Name = "hyperlink_dangXuat";
             this.hyperlink_dangXuat.Size = new System.Drawing.Size(58, 16);
             this.hyperlink_dangXuat.TabIndex = 4;
@@ -102,7 +104,7 @@
             this.label_usernameLogin.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.label_usernameLogin.Appearance.Options.UseFont = true;
             this.label_usernameLogin.Appearance.Options.UseForeColor = true;
-            this.label_usernameLogin.Location = new System.Drawing.Point(913, 3);
+            this.label_usernameLogin.Location = new System.Drawing.Point(887, 1);
             this.label_usernameLogin.Name = "label_usernameLogin";
             this.label_usernameLogin.Size = new System.Drawing.Size(0, 16);
             this.label_usernameLogin.TabIndex = 5;
@@ -112,7 +114,7 @@
             this.label_size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_size.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_size.Appearance.Options.UseFont = true;
-            this.label_size.Location = new System.Drawing.Point(451, 1);
+            this.label_size.Location = new System.Drawing.Point(897, 1);
             this.label_size.Name = "label_size";
             this.label_size.Size = new System.Drawing.Size(0, 16);
             this.label_size.TabIndex = 6;
@@ -174,21 +176,7 @@
             this.tabQLK.Controls.Add(this.btn_BCTonKho);
             this.tabQLK.Name = "tabQLK";
             this.tabQLK.PageText = "Quản Lý Kho";
-            this.tabQLK.Size = new System.Drawing.Size(1322, 115);
-            // 
-            // btn_BCTonKho
-            // 
-            this.btn_BCTonKho.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BCTonKho.Appearance.Options.UseFont = true;
-            this.btn_BCTonKho.Image = ((System.Drawing.Image)(resources.GetObject("btn_BCTonKho.Image")));
-            this.btn_BCTonKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btn_BCTonKho.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.btn_BCTonKho.Location = new System.Drawing.Point(25, 12);
-            this.btn_BCTonKho.Name = "btn_BCTonKho";
-            this.btn_BCTonKho.Size = new System.Drawing.Size(215, 100);
-            this.btn_BCTonKho.TabIndex = 81;
-            this.btn_BCTonKho.Text = "BÁO CÁO TỒN KHO";
-            this.btn_BCTonKho.Click += new System.EventHandler(this.btn_BCTonKho_Click);
+            this.tabQLK.Size = new System.Drawing.Size(1343, 115);
             // 
             // tabBH
             // 
@@ -203,6 +191,97 @@
             this.tabBH.Name = "tabBH";
             this.tabBH.PageText = "Bán Hàng";
             this.tabBH.Size = new System.Drawing.Size(1343, 115);
+            // 
+            // tabNH
+            // 
+            this.tabNH.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tabNH.Appearance.Options.UseBackColor = true;
+            this.tabNH.Caption = "tabNH";
+            this.tabNH.Controls.Add(this.btn_QLNhaCC);
+            this.tabNH.Controls.Add(this.btn_QLSanPham);
+            this.tabNH.Controls.Add(this.btn_HDNhapHang);
+            this.tabNH.Controls.Add(this.btn_donNhapHang);
+            this.tabNH.Name = "tabNH";
+            this.tabNH.PageText = "Nhập Hàng";
+            this.tabNH.Size = new System.Drawing.Size(1343, 115);
+            // 
+            // tabKeToan
+            // 
+            this.tabKeToan.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tabKeToan.Appearance.Options.UseBackColor = true;
+            this.tabKeToan.Caption = "tabNavigationPage4";
+            this.tabKeToan.Controls.Add(this.btn_phieuThu);
+            this.tabKeToan.Controls.Add(this.btn_phieuChi);
+            this.tabKeToan.Controls.Add(this.btn_BCCongNoKH);
+            this.tabKeToan.Controls.Add(this.btn_BCDoanhThu);
+            this.tabKeToan.Name = "tabKeToan";
+            this.tabKeToan.PageText = "Kế Toán";
+            this.tabKeToan.Size = new System.Drawing.Size(1343, 115);
+            // 
+            // tabAdmin
+            // 
+            this.tabAdmin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tabAdmin.Appearance.Options.UseBackColor = true;
+            this.tabAdmin.Caption = "tabNavigationPage5";
+            this.tabAdmin.Controls.Add(this.btn_RestoreCSDL);
+            this.tabAdmin.Controls.Add(this.btn_BackUpCSDL);
+            this.tabAdmin.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAdmin.Name = "tabAdmin";
+            this.tabAdmin.PageText = "Administrator";
+            this.tabAdmin.Size = new System.Drawing.Size(1322, 115);
+            // 
+            // tabHeThong
+            // 
+            this.tabHeThong.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tabHeThong.Appearance.Options.UseBackColor = true;
+            this.tabHeThong.Caption = "Hệ Thống";
+            this.tabHeThong.Controls.Add(this.btn_thayDoiQuyDinh);
+            this.tabHeThong.Controls.Add(this.btn_QLNV);
+            this.tabHeThong.Name = "tabHeThong";
+            this.tabHeThong.Size = new System.Drawing.Size(1343, 115);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.ForeColor = System.Drawing.Color.Gray;
+            this.mainPanel.Location = new System.Drawing.Point(0, 245);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1799, 629);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.pictureBox38);
+            this.panel38.Location = new System.Drawing.Point(12, 12);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(427, 216);
+            this.panel38.TabIndex = 85;
+            // 
+            // pictureBox38
+            // 
+            this.pictureBox38.Image = global::GUI.Properties.Resources.logo;
+            this.pictureBox38.Location = new System.Drawing.Point(44, 12);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(320, 158);
+            this.pictureBox38.TabIndex = 0;
+            this.pictureBox38.TabStop = false;
+            // 
+            // btn_BCTonKho
+            // 
+            this.btn_BCTonKho.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BCTonKho.Appearance.Options.UseFont = true;
+            this.btn_BCTonKho.Image = ((System.Drawing.Image)(resources.GetObject("btn_BCTonKho.Image")));
+            this.btn_BCTonKho.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btn_BCTonKho.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.btn_BCTonKho.Location = new System.Drawing.Point(25, 12);
+            this.btn_BCTonKho.Name = "btn_BCTonKho";
+            this.btn_BCTonKho.Size = new System.Drawing.Size(215, 100);
+            this.btn_BCTonKho.TabIndex = 81;
+            this.btn_BCTonKho.Text = "BÁO CÁO TỒN KHO";
+            this.btn_BCTonKho.Click += new System.EventHandler(this.btn_BCTonKho_Click);
             // 
             // btn_QLKhachHang
             // 
@@ -269,19 +348,6 @@
             this.btn_donDatHang.Text = "ĐƠN ĐẶT HÀNG";
             this.btn_donDatHang.Click += new System.EventHandler(this.btn_donDatHang_Click);
             // 
-            // tabNH
-            // 
-            this.tabNH.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tabNH.Appearance.Options.UseBackColor = true;
-            this.tabNH.Caption = "tabNH";
-            this.tabNH.Controls.Add(this.btn_QLNhaCC);
-            this.tabNH.Controls.Add(this.btn_QLSanPham);
-            this.tabNH.Controls.Add(this.btn_HDNhapHang);
-            this.tabNH.Controls.Add(this.btn_donNhapHang);
-            this.tabNH.Name = "tabNH";
-            this.tabNH.PageText = "Nhập Hàng";
-            this.tabNH.Size = new System.Drawing.Size(1343, 115);
-            // 
             // btn_QLNhaCC
             // 
             this.btn_QLNhaCC.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -331,19 +397,6 @@
             this.btn_donNhapHang.Size = new System.Drawing.Size(215, 100);
             this.btn_donNhapHang.TabIndex = 81;
             this.btn_donNhapHang.Text = "ĐƠN NHẬP HÀNG";
-            // 
-            // tabKeToan
-            // 
-            this.tabKeToan.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tabKeToan.Appearance.Options.UseBackColor = true;
-            this.tabKeToan.Caption = "tabNavigationPage4";
-            this.tabKeToan.Controls.Add(this.btn_phieuThu);
-            this.tabKeToan.Controls.Add(this.btn_phieuChi);
-            this.tabKeToan.Controls.Add(this.btn_BCCongNoKH);
-            this.tabKeToan.Controls.Add(this.btn_BCDoanhThu);
-            this.tabKeToan.Name = "tabKeToan";
-            this.tabKeToan.PageText = "Kế Toán";
-            this.tabKeToan.Size = new System.Drawing.Size(1322, 115);
             // 
             // btn_phieuThu
             // 
@@ -429,18 +482,6 @@
             this.btn_BCDoanhThu.Text = "BÁO CÁO DOANH THU";
             this.btn_BCDoanhThu.Click += new System.EventHandler(this.btn_BCDoanhThu_Click);
             // 
-            // tabAdmin
-            // 
-            this.tabAdmin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tabAdmin.Appearance.Options.UseBackColor = true;
-            this.tabAdmin.Caption = "tabNavigationPage5";
-            this.tabAdmin.Controls.Add(this.btn_RestoreCSDL);
-            this.tabAdmin.Controls.Add(this.btn_BackUpCSDL);
-            this.tabAdmin.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdmin.Name = "tabAdmin";
-            this.tabAdmin.PageText = "Administrator";
-            this.tabAdmin.Size = new System.Drawing.Size(1322, 115);
-            // 
             // btn_RestoreCSDL
             // 
             this.btn_RestoreCSDL.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -464,16 +505,6 @@
             this.btn_BackUpCSDL.Size = new System.Drawing.Size(215, 100);
             this.btn_BackUpCSDL.TabIndex = 81;
             this.btn_BackUpCSDL.Text = "SAO LƯU CƠ SỞ DỮ LIỆU";
-            // 
-            // tabHeThong
-            // 
-            this.tabHeThong.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.tabHeThong.Appearance.Options.UseBackColor = true;
-            this.tabHeThong.Caption = "Hệ Thống";
-            this.tabHeThong.Controls.Add(this.btn_thayDoiQuyDinh);
-            this.tabHeThong.Controls.Add(this.btn_QLNV);
-            this.tabHeThong.Name = "tabHeThong";
-            this.tabHeThong.Size = new System.Drawing.Size(1343, 115);
             // 
             // btn_thayDoiQuyDinh
             // 
@@ -501,35 +532,15 @@
             this.btn_QLNV.Text = "QUẢN LÝ NHÂN VIÊN";
             this.btn_QLNV.Click += new System.EventHandler(this.btn_QLNV_Click);
             // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.Controls.Add(this.labelControl1);
-            this.mainPanel.ForeColor = System.Drawing.Color.Gray;
-            this.mainPanel.Location = new System.Drawing.Point(0, 245);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1353, 455);
-            this.mainPanel.TabIndex = 3;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(154, 79);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(733, 58);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Hãy chọn 1 chức năng để hiển thị!";
-            // 
             // MainForm
             // 
+            this.Appearance.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(908, 507);
+            this.ClientSize = new System.Drawing.Size(1354, 681);
+            this.Controls.Add(this.panel38);
             this.Controls.Add(this.hyperlink_dangXuat);
             this.Controls.Add(this.tabPanel);
             this.Controls.Add(this.buttonPanel);
@@ -549,8 +560,8 @@
             this.tabKeToan.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
             this.tabHeThong.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,8 +597,9 @@
         public DevExpress.XtraEditors.SimpleButton btn_thayDoiQuyDinh;
         public DevExpress.XtraEditors.SimpleButton btn_QLNV;
         public DevExpress.XtraEditors.SimpleButton btn_BCCongNoKH;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.SimpleButton btn_HDBanHangLe;
+        public System.Windows.Forms.PictureBox pictureBox38;
+        public System.Windows.Forms.Panel panel38;
     }
 }
 

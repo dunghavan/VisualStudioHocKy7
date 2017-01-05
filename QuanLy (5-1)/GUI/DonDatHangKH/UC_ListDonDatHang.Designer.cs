@@ -47,10 +47,12 @@
             // gridControl_DDH
             // 
             this.gridControl_DDH.DataSource = this.donDatHangBindingSource;
-            this.gridControl_DDH.Location = new System.Drawing.Point(68, 138);
+            this.gridControl_DDH.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl_DDH.Location = new System.Drawing.Point(22, 40);
             this.gridControl_DDH.MainView = this.gv_DSDDH;
+            this.gridControl_DDH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridControl_DDH.Name = "gridControl_DDH";
-            this.gridControl_DDH.Size = new System.Drawing.Size(1112, 458);
+            this.gridControl_DDH.Size = new System.Drawing.Size(1326, 295);
             this.gridControl_DDH.TabIndex = 0;
             this.gridControl_DDH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_DSDDH});
@@ -62,6 +64,10 @@
             // 
             // gv_DSDDH
             // 
+            this.gv_DSDDH.Appearance.HeaderPanel.FontSizeDelta = 6;
+            this.gv_DSDDH.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gv_DSDDH.Appearance.Row.FontSizeDelta = 6;
+            this.gv_DSDDH.Appearance.Row.Options.UseFont = true;
             this.gv_DSDDH.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaDDH,
             this.NgayLap,
@@ -137,24 +143,26 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(416, 32);
+            this.labelControl1.Location = new System.Drawing.Point(196, 3);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(434, 85);
+            this.labelControl1.Size = new System.Drawing.Size(289, 33);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "DANH SÁCH ĐƠN ĐẶT HÀNG";
             // 
             // UC_ListDonDatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridControl_DDH);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_ListDonDatHang";
-            this.Size = new System.Drawing.Size(2042, 700);
+            this.Size = new System.Drawing.Size(1361, 455);
             this.Load += new System.EventHandler(this.UC_ListDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DDH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.donDatHangBindingSource)).EndInit();

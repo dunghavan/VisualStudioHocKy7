@@ -70,7 +70,6 @@ namespace GUI
                             break;
                         }
                     }
-                        
                 }
 
                 if (checkLogin)
@@ -78,10 +77,18 @@ namespace GUI
                     //((MainForm)parentForm).label_size.Text = "Kích thước size: " + ((MainForm)parentForm).Size;
                     ((MainForm)parentForm).hyperlink_dangXuat.Visible = true;
                     ((MainForm)parentForm).label_usernameLogin.Text = "Bạn đã đăng nhập với tài khoản: " + login_User.username;
+                    ((MainForm)parentForm).label_usernameLogin.Visible = true;
                     ((MainForm)parentForm).tabPanel.Visible = true;
                     //((MainForm)parentForm).panelControl1.Hide();
                     UserControl_Login.Instance.Hide();
                     ((MainForm)parentForm).buttonPanel.Show();
+                    //
+                    ((MainForm)parentForm).panel38.Hide();
+                    ((MainForm)parentForm).mainPanel.BringToFront();
+                    ((MainForm)parentForm).buttonPanel.BringToFront();
+                    //
+                    ((MainForm)parentForm).mainPanel.Controls.Add(UserControl_MainEmpty.Instance);
+                    UserControl_MainEmpty.Instance.BringToFront();
 
                     disableAllButton();
                     switch(login_User.maLoaiNV)

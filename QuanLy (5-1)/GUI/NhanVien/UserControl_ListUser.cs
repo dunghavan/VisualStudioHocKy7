@@ -140,8 +140,11 @@ namespace GUI
             //gán row đã chọn vào selectedRow:
             selectedRow = gridView_DSNhanVien.GetDataRow(selectedRowsArray[0]);
 
+            if (selectedRow["Trạng Thái"].ToString() == "Đang kích hoạt")
+                UserControl_ListButton_User.Instance.btn_Xoa.Enabled = true;
+            else
+                UserControl_ListButton_User.Instance.btn_Xoa.Enabled = false;
             UserControl_ListButton_User.Instance.btn_Edit.Enabled = true;
-            UserControl_ListButton_User.Instance.btn_Xoa.Enabled = true;
             label_notification.Text = null;
         }
     }
