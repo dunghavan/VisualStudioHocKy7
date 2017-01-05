@@ -41,6 +41,8 @@
             this.label_usernameLogin = new DevExpress.XtraEditors.LabelControl();
             this.label_size = new DevExpress.XtraEditors.LabelControl();
             this.buttonPanel = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.tabPanel = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabQLK = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.btn_BCTonKho = new DevExpress.XtraEditors.SimpleButton();
@@ -67,9 +69,8 @@
             this.btn_thayDoiQuyDinh = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QLNV = new DevExpress.XtraEditors.SimpleButton();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.pictureBox38 = new System.Windows.Forms.PictureBox();
-            this.buttonPanel.SuspendLayout();
+            this.panel38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPanel)).BeginInit();
             this.tabPanel.SuspendLayout();
             this.tabQLK.SuspendLayout();
@@ -78,8 +79,6 @@
             this.tabKeToan.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tabHeThong.SuspendLayout();
-            this.panel38.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             this.SuspendLayout();
             // 
             // hyperlink_dangXuat
@@ -122,11 +121,27 @@
             // 
             // buttonPanel
             // 
-            this.buttonPanel.Controls.Add(this.panel38);
             this.buttonPanel.Location = new System.Drawing.Point(0, 192);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.Size = new System.Drawing.Size(1361, 50);
             this.buttonPanel.TabIndex = 7;
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.pictureBox38);
+            this.panel38.Location = new System.Drawing.Point(12, 12);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(427, 216);
+            this.panel38.TabIndex = 85;
+            // 
+            // pictureBox38
+            // 
+            this.pictureBox38.Image = global::GUI.Properties.Resources.logo;
+            this.pictureBox38.Location = new System.Drawing.Point(44, 12);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(320, 158);
+            this.pictureBox38.TabIndex = 0;
+            this.pictureBox38.TabStop = false;
             // 
             // tabPanel
             // 
@@ -517,23 +532,6 @@
             this.mainPanel.Size = new System.Drawing.Size(1799, 629);
             this.mainPanel.TabIndex = 3;
             // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.pictureBox38);
-            this.panel38.Location = new System.Drawing.Point(34, 23);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(427, 216);
-            this.panel38.TabIndex = 85;
-            // 
-            // pictureBox38
-            // 
-            this.pictureBox38.Image = global::GUI.Properties.Resources.logo;
-            this.pictureBox38.Location = new System.Drawing.Point(44, 12);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(320, 158);
-            this.pictureBox38.TabIndex = 0;
-            this.pictureBox38.TabStop = false;
-            // 
             // MainForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -542,6 +540,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1354, 681);
+            this.Controls.Add(this.panel38);
             this.Controls.Add(this.hyperlink_dangXuat);
             this.Controls.Add(this.tabPanel);
             this.Controls.Add(this.buttonPanel);
@@ -553,7 +552,8 @@
             this.Text = "Phần mềm quản lý cửa hàng hoa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.buttonPanel.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPanel)).EndInit();
             this.tabPanel.ResumeLayout(false);
             this.tabQLK.ResumeLayout(false);
@@ -562,8 +562,6 @@
             this.tabKeToan.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
             this.tabHeThong.ResumeLayout(false);
-            this.panel38.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

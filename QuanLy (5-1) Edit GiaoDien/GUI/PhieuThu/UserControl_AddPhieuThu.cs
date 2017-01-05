@@ -218,10 +218,13 @@ namespace GUI
                 tempSoTienThu = Int32.Parse(textEdit_soTienThu.Text.ToString());
 
                 //KIỂM TRA TỔNG TIỀN NỢ:
+                ThamSoBUS objTSBUS = new ThamSoBUS();
+                int soTienNoToiDa = objTSBUS.TienNoToiDa();
+
                 int tempTongTienNo = Convert.ToInt32(textEdit_TongTienNo.Text);
-                if (tempTongTienNo < 0 || tempTongTienNo > 200000)
+                if (tempTongTienNo < 0 || tempTongTienNo > soTienNoToiDa)
                 {
-                    XtraMessageBox.Show("Số tiền nợ không vượt quá 20.000.000đ!");
+                    XtraMessageBox.Show("Số tiền nợ không vượt quá " + soTienNoToiDa + "đ!");
                     return false;
                 }
                 return true;

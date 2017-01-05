@@ -48,7 +48,8 @@ namespace GUI
                 {
                     tempUsername = dr["Username"].ToString().Trim();
                     tempPassword = dr["Password"].ToString().Trim();
-                    if (String.Compare(textEdit_username.Text, tempUsername) == 0 && String.Compare(textEdit_password.Text, tempPassword) == 0)
+                    //if (String.Compare(textEdit_username.Text, tempUsername) == 0 && String.Compare(textEdit_password.Text, tempPassword) == 0)
+                    if (String.Compare(textEdit_username.Text, tempUsername) == 0)
                     {
                         exist = true;
                         if (dr["IsActive"].ToString() == "False")

@@ -315,22 +315,22 @@
             // 
             // btn_Huy
             // 
-            this.btn_Huy.Location = new System.Drawing.Point(494, 289);
+            this.btn_Huy.Location = new System.Drawing.Point(519, 289);
             this.btn_Huy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(135, 23);
+            this.btn_Huy.Size = new System.Drawing.Size(135, 29);
             this.btn_Huy.TabIndex = 62;
-            this.btn_Huy.Text = "Hủy";
+            this.btn_Huy.Text = "Hủy bỏ";
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // btn_ThemHD
             // 
-            this.btn_ThemHD.Location = new System.Drawing.Point(689, 289);
+            this.btn_ThemHD.Location = new System.Drawing.Point(722, 289);
             this.btn_ThemHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ThemHD.Name = "btn_ThemHD";
-            this.btn_ThemHD.Size = new System.Drawing.Size(135, 23);
+            this.btn_ThemHD.Size = new System.Drawing.Size(135, 29);
             this.btn_ThemHD.TabIndex = 61;
-            this.btn_ThemHD.Text = "Thêm HD";
+            this.btn_ThemHD.Text = "Thêm hóa đơn";
             this.btn_ThemHD.Click += new System.EventHandler(this.btn_ThemHD_Click);
             // 
             // cbb_KH

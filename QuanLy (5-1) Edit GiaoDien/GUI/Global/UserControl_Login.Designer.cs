@@ -102,7 +102,7 @@
             // textEdit_username
             // 
             this.textEdit_username.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit_username.EditValue = "dunghavan";
+            this.textEdit_username.EditValue = "chucuahang";
             this.textEdit_username.Location = new System.Drawing.Point(115, 36);
             this.textEdit_username.Name = "textEdit_username";
             this.textEdit_username.Size = new System.Drawing.Size(181, 20);

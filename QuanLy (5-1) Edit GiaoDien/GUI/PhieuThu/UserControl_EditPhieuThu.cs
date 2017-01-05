@@ -178,9 +178,12 @@ namespace GUI
                         return false;
                     }
                 tempSoTienNo = Int32.Parse(textEdit_soTienNo.Text.ToString());
-                if (tempSoTienNo < 0 || tempSoTienNo > 20000000)
+                
+                ThamSoBUS objTSBUS = new ThamSoBUS();
+                int soTienNoToiDa = objTSBUS.TienNoToiDa();
+                if (tempSoTienNo < 0 || tempSoTienNo > soTienNoToiDa)
                 {
-                    XtraMessageBox.Show("Số tiền nợ không vượt quá 20.000.000đ!");
+                    XtraMessageBox.Show("Số tiền nợ không vượt quá " + soTienNoToiDa + "đ!");
                     return false;
                 }
 
